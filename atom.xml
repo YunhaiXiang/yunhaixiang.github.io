@@ -44,11 +44,11 @@
   </entry>
   
   <entry>
-    <title>A Beautiful Result on Determinants - The Smith Determinant</title>
+    <title>The Smith Determinant</title>
     <link href="http://yoursite.com/2019/07/11/gcd-matrix/"/>
     <id>http://yoursite.com/2019/07/11/gcd-matrix/</id>
     <published>2019-07-11T05:24:17.000Z</published>
-    <updated>2019-07-12T10:09:27.367Z</updated>
+    <updated>2020-02-11T18:40:16.174Z</updated>
     
     <content type="html"><![CDATA[<p>Here’s a curious identity I ran across on AoPS: the determinant of an \(n\times n\) matrix where the \((i,j)\) entries is \(\gcd(i,j)\) happends to be the product of the Euler totient values from \(1\) to \(n\).</p><blockquote><p>Theorem (Smith’s Determinant).<br>$$<br>\det\begin{pmatrix}<br>\gcd(1,1)&amp;\gcd(1,2)&amp;\cdots&amp;\gcd(1,n)\\<br>\gcd(2,1)&amp;\gcd(2,2)&amp;\cdots&amp;\gcd(2,n)\\<br>\vdots &amp; \vdots &amp; \ddots &amp;\vdots\\<br>\gcd(n,1)&amp;\gcd(n,2)&amp;\cdots&amp;\gcd(n,n)<br>\end{pmatrix}=\prod_{m=1}^n\varphi(m)<br>$$where \(\varphi(\cdot)\) is the Euler totient function.</p></blockquote><p>Beautiful isn’t it? The proof of this result is surprisingly simple: to describe it briefly, multiply the first row by \(-1\) and add it to the \(2,3,4,…,n\) rows, multiply the second row by \(-1\) and add it to the \(2,4,6,…\) rows, multiply the third row by \(-1\) and add it to the \(3,6,9,…\) rows, and so on. Then use of the identity \(\sum_{d\mid n}\varphi(d)=n\) to simplify. Another method is to use of UD decomposition, decomposing the original matrix into<br>$$<br>\begin{pmatrix}<br>\varphi(1)&amp;0&amp;0&amp;0&amp;0&amp;\cdots\\<br>\varphi(1)&amp;\varphi(2)&amp;0&amp;0&amp;0&amp;\cdots\\<br>\varphi(1)&amp;0&amp;\varphi(3)&amp;0&amp;0&amp;\cdots\\<br>\varphi(1)&amp;\varphi(2)&amp;0&amp;\varphi(4)&amp;0&amp;\cdots\\<br>\varphi(1)&amp;0&amp;0&amp;0&amp;\varphi(5)&amp;\cdots\\<br>\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots\\<br>\end{pmatrix}<br>\begin{pmatrix}<br>1&amp;1&amp;1&amp;1&amp;1&amp;\cdots\\<br>0&amp;1&amp;0&amp;1&amp;0&amp;\cdots\\<br>0&amp;0&amp;1&amp;0&amp;0&amp;\cdots\\<br>0&amp;0&amp;0&amp;1&amp;0&amp;\cdots\\<br>0&amp;0&amp;0&amp;0&amp;1&amp;\cdots\\<br>\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots\\<br>\end{pmatrix}<br>$$And hence by the multiplicative property of determinants, we have our desired result.</p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
