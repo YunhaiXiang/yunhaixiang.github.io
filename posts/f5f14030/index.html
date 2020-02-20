@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head><meta name="generator" content="Hexo 3.8.0">
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-<title>Archives: 2019 - Yunhai Xiang</title>
+<title>The Smith Determinant - Yunhai Xiang</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -14,13 +14,18 @@
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Yunhai Xiang">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+    <meta name="description" content="Here’s a curious identity I ran across on AoPS: the determinant of an \(n\times n\) matrix where the \((i,j)\) entries is \(\gcd(i,j)\) happends to be the product of the Euler totient values from \(1\">
+<meta name="keywords" content="Number Theory,Linear Algebra">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Smith Determinant">
+<meta property="og:url" content="http://yoursite.com/posts/f5f14030/index.html">
 <meta property="og:site_name" content="Yunhai Xiang">
+<meta property="og:description" content="Here’s a curious identity I ran across on AoPS: the determinant of an \(n\times n\) matrix where the \((i,j)\) entries is \(\gcd(i,j)\) happends to be the product of the Euler totient values from \(1\">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-02-20T17:11:12.017Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yunhai Xiang">
+<meta name="twitter:title" content="The Smith Determinant">
+<meta name="twitter:description" content="Here’s a curious identity I ran across on AoPS: the determinant of an \(n\times n\) matrix where the \((i,j)\) entries is \(\gcd(i,j)\) happends to be the product of the Euler totient values from \(1\">
 
 
 
@@ -95,6 +100,16 @@
             </a>
             
             
+            <div class="navbar-item is-hoverable has-dropdown is-hidden-mobile is-hidden-tablet-only toc">
+                <a class="navbar-item" title="Table of Contents">
+                    <i class="fa fa-list"></i>
+                </a>
+                <div class="navbar-dropdown is-right">
+                    
+                    
+                </div>
+            </div>
+            
             
             <a class="navbar-item" title="GitHub" href="https://github.com/YunhaiXiang">
                 
@@ -109,34 +124,97 @@
 
     <section class="section">
     <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            The Smith Determinant
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-07-11T05:24:17.000Z" itemprop="datePublished">Jul 11 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Mathematics/">Mathematics</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a minute read (About 217 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>Here’s a curious identity I ran across on AoPS: the determinant of an \(n\times n\) matrix where the \((i,j)\) entries is \(\gcd(i,j)\) happends to be the product of the Euler totient values from \(1\) to \(n\).</p>
+<blockquote>
+<p>Theorem (Smith’s Determinant).<br>$$<br>\det\begin{pmatrix}<br>\gcd(1,1)&amp;\gcd(1,2)&amp;\cdots&amp;\gcd(1,n)\\<br>\gcd(2,1)&amp;\gcd(2,2)&amp;\cdots&amp;\gcd(2,n)\\<br>\vdots &amp; \vdots &amp; \ddots &amp;\vdots\\<br>\gcd(n,1)&amp;\gcd(n,2)&amp;\cdots&amp;\gcd(n,n)<br>\end{pmatrix}=\prod_{m=1}^n\varphi(m)<br>$$where \(\varphi(\cdot)\) is the Euler totient function.</p>
+</blockquote>
+<p>Beautiful isn’t it? The proof of this result is surprisingly simple: to describe it briefly, multiply the first row by \(-1\) and add it to the \(2,3,4,…,n\) rows, multiply the second row by \(-1\) and add it to the \(2,4,6,…\) rows, multiply the third row by \(-1\) and add it to the \(3,6,9,…\) rows, and so on. Then use of the identity \(\sum_{d\mid n}\varphi(d)=n\) to simplify. Another method is to use of UD decomposition, decomposing the original matrix into<br>$$<br>\begin{pmatrix}<br>\varphi(1)&amp;0&amp;0&amp;0&amp;0&amp;\cdots\\<br>\varphi(1)&amp;\varphi(2)&amp;0&amp;0&amp;0&amp;\cdots\\<br>\varphi(1)&amp;0&amp;\varphi(3)&amp;0&amp;0&amp;\cdots\\<br>\varphi(1)&amp;\varphi(2)&amp;0&amp;\varphi(4)&amp;0&amp;\cdots\\<br>\varphi(1)&amp;0&amp;0&amp;0&amp;\varphi(5)&amp;\cdots\\<br>\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots\\<br>\end{pmatrix}<br>\begin{pmatrix}<br>1&amp;1&amp;1&amp;1&amp;1&amp;\cdots\\<br>0&amp;1&amp;0&amp;1&amp;0&amp;\cdots\\<br>0&amp;0&amp;1&amp;0&amp;0&amp;\cdots\\<br>0&amp;0&amp;0&amp;1&amp;0&amp;\cdots\\<br>0&amp;0&amp;0&amp;0&amp;1&amp;\cdots\\<br>\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots\\<br>\end{pmatrix}<br>$$And hence by the multiplicative property of determinants, we have our desired result.</p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Number-Theory/">#Number Theory</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Linear-Algebra/">#Linear Algebra</a></span>
+    
+    </div>
     
     
-        <div class="archive content">
-            <h4 class="title is-4" id="2019">2019</h4>
-            <div class="articles">
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
             
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2019-07-11T05:24:17.000Z" itemprop="datePublished">
-                        Jul 11</time>
-                    <h6 class="title is-6"><a href="/posts/f5f14030/">The Smith Determinant</a></h6>
-                </div>
+            <a href="/posts/e3b6140a/">Nine Point Circle and Feuerbach&#39;s Theorem</a>
             
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2019-07-11T01:41:07.000Z" itemprop="datePublished">
-                        Jul 11</time>
-                    <h6 class="title is-6"><a href="/posts/b1c0b801/">Burnside&#39;s Lemma and Polya Enumeration Theorem</a></h6>
-                </div>
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
             
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2019-07-10T06:21:46.000Z" itemprop="datePublished">
-                        Jul 10</time>
-                    <h6 class="title is-6"><a href="/posts/9f9a665b/">Milking the Integrals!</a></h6>
-                </div>
+            <a href="/posts/b1c0b801/">Burnside&#39;s Lemma and Polya Enumeration Theorem</a>
             
-            </div>
-        </div>
+        </span>
+    </div>
     
+</article>
+
+
+<div class="sharebox">
     
+<div class="addthis_inline_share_toolbox"></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ca2a3a28552765a"></script>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '204768332e79b6008ca2',
+        clientSecret: '08ff416de4d6f51b0f52cf74610acbdbdee9a07c',
+        id: 'posts/f5f14030/',
+        repo: 'yunhaixiang.me-comments',
+        owner: 'YunhaiXiang',
+        admin: ['YunhaiXiang'],
+        language: 'en',
+        distractionFreeMode: false,
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</div>
+
     </div>
 </section>
     <footer class="footer">
