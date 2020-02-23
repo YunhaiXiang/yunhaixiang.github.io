@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head><meta name="generator" content="Hexo 3.8.0">
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-<title>Yunhai Xiang</title>
+<title>Burnside&#39;s Lemma and Polya Enumeration Theorem - Yunhai Xiang</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -14,13 +14,18 @@
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Yunhai Xiang">
-<meta property="og:url" content="http://yoursite.com/index.html">
+    <meta name="description" content="Burnside’s lemma is a lemma of elementary group theory that is very useful in counting, and often seen as an “overkill” trick in math competitions. Intuitively, Burnside’s lemma counts the number of a">
+<meta name="keywords" content="Abstract Algebra,Combinatorics,Group Theory">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Burnside&#39;s Lemma and Polya Enumeration Theorem">
+<meta property="og:url" content="http://yoursite.com/archives/b1c0b801/index.html">
 <meta property="og:site_name" content="Yunhai Xiang">
+<meta property="og:description" content="Burnside’s lemma is a lemma of elementary group theory that is very useful in counting, and often seen as an “overkill” trick in math competitions. Intuitively, Burnside’s lemma counts the number of a">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-02-20T17:11:12.010Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yunhai Xiang">
+<meta name="twitter:title" content="Burnside&#39;s Lemma and Polya Enumeration Theorem">
+<meta name="twitter:description" content="Burnside’s lemma is a lemma of elementary group theory that is very useful in counting, and often seen as an “overkill” trick in math competitions. Intuitively, Burnside’s lemma counts the number of a">
 
 
 
@@ -95,6 +100,16 @@
             </a>
             
             
+            <div class="navbar-item is-hoverable has-dropdown is-hidden-mobile is-hidden-tablet-only toc">
+                <a class="navbar-item" title="Table of Contents">
+                    <i class="fa fa-list"></i>
+                </a>
+                <div class="navbar-dropdown is-right">
+                    
+                    
+                </div>
+            </div>
+            
             
             <a class="navbar-item" title="GitHub" href="https://github.com/YunhaiXiang">
                 
@@ -109,95 +124,10 @@
 
     <section class="section">
     <div class="container">
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
+    <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            <a href="/archives/e3b6140a/" itemprop="url">Nine Point Circle and Feuerbach&#39;s Theorem</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            <time datetime="2020-02-10T03:51:01.000Z" itemprop="datePublished">Feb 10 2020</time>
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/Mathematics/">Mathematics</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            a few seconds read (About 78 words)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <p>I’ve been playing with the <a href="https://github.com/3b1b/manim" target="_blank" rel="noopener">Manim</a> library lately. Here’s a test animation I made demonstrating the <a href="https://en.wikipedia.org/wiki/Nine-point_circle" target="_blank" rel="noopener">nine point circle</a> and part of Feuerbach’s theorem. It should be noted that Feuerbach’s Theorem also tells us that the nine point circle of a triangle is tangent to the three excircles of that triangle, but I did not include that in the video. </p>
-<p align="center"><br>    <iframe width="760" height="427" src="https://www.youtube.com/embed/WKqdXB2t86E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br></p>
-
-
-
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
-    
-    </div>
-    
-    
-</article>
-
-
-
-
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/archives/f5f14030/" itemprop="url">The Smith Determinant</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            <time datetime="2019-07-11T17:24:17.000Z" itemprop="datePublished">Jul 12 2019</time>
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/Mathematics/">Mathematics</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            a minute read (About 217 words)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <p>Here’s a curious identity I ran across on AoPS: the determinant of an \(n\times n\) matrix where the \((i,j)\) entries is \(\gcd(i,j)\) happends to be the product of the Euler totient values from \(1\) to \(n\).</p>
-<blockquote>
-<p>Theorem (Smith’s Determinant).<br>$$<br>\det\begin{pmatrix}<br>\gcd(1,1)&amp;\gcd(1,2)&amp;\cdots&amp;\gcd(1,n)\\<br>\gcd(2,1)&amp;\gcd(2,2)&amp;\cdots&amp;\gcd(2,n)\\<br>\vdots &amp; \vdots &amp; \ddots &amp;\vdots\\<br>\gcd(n,1)&amp;\gcd(n,2)&amp;\cdots&amp;\gcd(n,n)<br>\end{pmatrix}=\prod_{m=1}^n\varphi(m)<br>$$where \(\varphi(\cdot)\) is the Euler totient function.</p>
-</blockquote>
-<p>Beautiful isn’t it? The proof of this result is surprisingly simple: to describe it briefly, multiply the first row by \(-1\) and add it to the \(2,3,4,…,n\) rows, multiply the second row by \(-1\) and add it to the \(2,4,6,…\) rows, multiply the third row by \(-1\) and add it to the \(3,6,9,…\) rows, and so on. Then use of the identity \(\sum_{d\mid n}\varphi(d)=n\) to simplify. Another method is to use of UD decomposition, decomposing the original matrix into<br>$$<br>\begin{pmatrix}<br>\varphi(1)&amp;0&amp;0&amp;0&amp;0&amp;\cdots\\<br>\varphi(1)&amp;\varphi(2)&amp;0&amp;0&amp;0&amp;\cdots\\<br>\varphi(1)&amp;0&amp;\varphi(3)&amp;0&amp;0&amp;\cdots\\<br>\varphi(1)&amp;\varphi(2)&amp;0&amp;\varphi(4)&amp;0&amp;\cdots\\<br>\varphi(1)&amp;0&amp;0&amp;0&amp;\varphi(5)&amp;\cdots\\<br>\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots\\<br>\end{pmatrix}<br>\begin{pmatrix}<br>1&amp;1&amp;1&amp;1&amp;1&amp;\cdots\\<br>0&amp;1&amp;0&amp;1&amp;0&amp;\cdots\\<br>0&amp;0&amp;1&amp;0&amp;0&amp;\cdots\\<br>0&amp;0&amp;0&amp;1&amp;0&amp;\cdots\\<br>0&amp;0&amp;0&amp;0&amp;1&amp;\cdots\\<br>\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots\\<br>\end{pmatrix}<br>$$And hence by the multiplicative property of determinants, we have our desired result.</p>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
-    
-    </div>
-    
-    
-</article>
-
-
-
-
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/archives/b1c0b801/" itemprop="url">Burnside&#39;s Lemma and Polya Enumeration Theorem</a>
+            Burnside&#39;s Lemma and Polya Enumeration Theorem
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
@@ -257,94 +187,64 @@
     
     </div>
     
+    <div class="columns is-variable is-1 is-multiline is-mobile">
     
-</article>
-
-
-
-
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Abstract-Algebra/">#Abstract Algebra</a></span>
     
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/archives/9f9a665b/" itemprop="url">A Collection of Clever Integral Tricks</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            <time datetime="2019-07-10T18:21:46.000Z" itemprop="datePublished">Jul 11 2019</time>
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/Mathematics/">Mathematics</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            6 minutes read (About 878 words)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Combinatorics/">#Combinatorics</a></span>
     
-        <p>This post is my collection of obscure, rare, or asthetically pleasing integral tricks. Some of them use clever substitutions, others exploit the symmetry of the integrand, or make use of some devilishly sly maneuvers such as differentiating under the integral sign.  For a quick appetizer, try evaluate<br>$$<br>\int_0^\pi\ln(a^2-2a\cos x+1)\,\mathrm d x<br>$$where \(a&gt;0\). This is one of my favorite integrals. We will see later in this post that this integral can be solved by at least five different methods, which is simply astounding! I should clearify that not all of these tricks are meant to be pragmatic, and the vast majority of tricks in this collection are for recreational mathematics. The integral tricks in this collection mainly comes from past papers of math olympiads such as the Putnam, PUMaC, HMMT and SMT, as well as online math communities like <a href="https://math.stackexchange.com" target="_blank" rel="noopener">Math Stack Exchange</a> and <a href="https://artofproblemsolving.com/community" target="_blank" rel="noopener">Art of Problem Solving</a>. For further reading, I really recommend the book <a href="https://www.springer.com/gp/book/9781493912766" target="_blank" rel="noopener"><em>Inside Interesting Integrals</em></a> by Paul J. Nahin, who does a better job of summarizing integral tricks than I do.</p>
-<hr>
-<h4 id="Exploiting-the-Symmetry-of-the-Integrand"><a href="#Exploiting-the-Symmetry-of-the-Integrand" class="headerlink" title="Exploiting the Symmetry of the Integrand"></a>Exploiting the Symmetry of the Integrand</h4><p>In many cases, mathematics tends to reward you when you respect its symmetry, and when it comes to milking integrals, sometimes we can exploit the hidden symmetries in the integrand and solve the integral surprisingly quickly. Case in point, try the following example.</p>
-<p>$$\int_{-\pi/4}^{\pi/4}\frac{\cos x}{e^{\sin^3 x}+1}\,\mathrm dx$$As a hint, observe that the interval of integration is symmetric, but the integrand is not an odd function. Also note that the denominator is an even function and \(\sin^3 x\) is odd. Try the substitution \(u=-x\) and see if you can simplify the integrand by getting rid of the denominator.</p>
-<div class="spoiler collapsed"><div class="spoiler-title">Solution</div><div class="spoiler-content"><p>By symmetry or the substitution \(u=-x\), we can easily obtain<br>$$I=-\int_{\pi/4}^{-\pi/4}\frac{\cos (-u)}{e^{-\sin^3 u}+1}\,\mathrm du=\int_{-\pi/4}^{\pi/4}\frac{\cos x}{e^{-\sin^3 x}+1}\,\mathrm dx$$Note that \(u\) is  merely a dummy variable, so we can change it to \(x\). Therefore,<br>$$<br>\begin{aligned}<br>2I&amp;=\int_{-\pi/4}^{\pi/4}\left(\frac{\cos x}{e^{\sin^3 x}+1}+\frac{\cos x}{e^{-\sin^3 x}+1}\right)\,\mathrm dx\\<br>&amp;=\int_{-\pi/4}^{\pi/4}\left(\frac{\cos x}{e^{\sin^3 x}+1}+\frac{e^{\sin^3x}\cos x}{1+e^{\sin^{3}x}}\right)\,\mathrm dx\\<br>&amp;=\int_{-\pi/4}^{\pi/4}\frac{(1+e^{\sin^3x})\cos x}{1+e^{\sin^3x}}\,\mathrm dx\\<br>&amp;=\int_{-\pi/4}^{\pi/4}\cos x\,\mathrm dx\\<br>&amp;=\sqrt{2}<br>\end{aligned}<br>$$Therefore \(I=\frac{\sqrt{2}}{2}\).</p>
-</div></div>
-<p>Generalizing the technique we have the following theorem.</p>
-<blockquote>
-<p>Theorem 1. For \(a,b\in\mathbf{R}\) and \(f\) integrable on \([a,b]\)<br>$$<br>\int_a^bf(x)\,\mathrm{d}x=\int_a^bf(a+b-x)\,\mathrm dx=\frac{1}{2}\int_{a}^b\left(f(x)+f(a+b-x)\right)\,\mathrm dx<br>$$</p>
-</blockquote>
-<blockquote>
-<p>Excercise 1. (Applications of Theorem 1)</p>
-<ol>
-<li>Evaluate \(\displaystyle\int_0^{\pi/4}\ln(1+\tan x)\,\mathrm dx\)</li>
-<li>Evaluate \(\displaystyle \int_0^{\pi/2}\frac{\sin x+\cos x}{1+\sqrt[5]{\tan x}}\,\mathrm dx\)</li>
-<li>Evaluate \(\displaystyle \int_3^7\frac{\ln (x+2)}{\ln (-x^2+10x+24)}\,\mathrm dx\)</li>
-<li>Evaluate \(\displaystyle\int_{-\pi}^\pi\frac{x^2}{ 1+\sin x+\sqrt{1+\sin^2x}}\,\mathrm dx\)</li>
-</ol>
-</blockquote>
-<p>However, this is not the only form of symmetry we can exploit. Observe, that for a improperly integrable function \(f\) over \((0,\infty)\), the integral \(\displaystyle\int_0^\infty f\), when using the substitution \(u=1/x\) gives us another integral over \((0,\infty)\). Using this property, we can milk some integrals whose integrands have hidden symmetries with respect to inversion. For example,</p>
-<blockquote>
-<p>Example 2. Evaluate<br>$$<br>\int_0^\infty\frac{\ln \frac{1+x^{11}}{1+x^3}}{(1+x^2)\ln x}\,\mathrm dx<br>$$<div class="spoiler collapsed"><div class="spoiler-title">Hint</div><div class="spoiler-content"><p>There are two ways one can go about solving this integral. You can either directly apply the substitution \(u=1/x\), or you can first use the fact that \(\displaystyle\int_0^\infty f=\int_0^1 f+\int_1^\infty f\) then use the substitution \(u=1/x\) on the second integral.</p>
-</div></div><div class="spoiler collapsed"><div class="spoiler-title">Solution</div><div class="spoiler-content"><p>First we have<br>$$<br>\int_0^\infty\frac{\ln \frac{1+x^{11}}{1+x^3}}{(1+x^2)\ln x}\,\mathrm dx=\int_0^1\frac{\ln \frac{1+x^{11}}{1+x^3}}{(1+x^2)\ln x}\,\mathrm dx+\int_1^\infty\frac{\ln \frac{1+x^{11}}{1+x^3}}{(1+x^2)\ln x}\,\mathrm dx<br>$$By the substitution \(u=1/x\),<br>$$<br>\begin{aligned}<br>\int_1^\infty\frac{\ln \frac{1+x^{11}}{1+x^3}}{(1+x^2)\ln x}\,\mathrm dx&amp;=-\int_1^0\frac{\ln \frac{1+u^{-11}}{1+u^{-3}}}{u^2(1+u^{-2})\ln u^{-1}}\,\mathrm du\\<br>&amp;=-\int_0^1\frac{\ln u^{-8}\frac{1+u^{11}}{1+u^{3}}}{(u^2+1)\ln u}\,\mathrm du\\<br>&amp;=-\int_0^1\frac{-8\ln u+\ln\frac{1+u^{11}}{1+u^{3}}}{(u^2+1)\ln u}\,\mathrm du\\<br>&amp;=8\int_0^1\frac{1}{u^2+1}\,\mathrm du-\int_0^1\frac{\ln \frac{1+x^{11}}{1+x^3}}{(1+x^2)\ln x}\,\mathrm dx<br>\end{aligned}<br>$$Therefore,<br>$$<br>\int_0^\infty\frac{\ln \frac{1+x^{11}}{1+x^3}}{(1+x^2)\ln x}\,\mathrm dx=8\int_0^1\frac{1}{u^2+1}\,\mathrm du=2\pi<br>$$</p>
-</div></div></p>
-</blockquote>
-<blockquote>
-<p>Theorem 2. For improperly integrable function \(f\) over \((0,\infty)\),<br>$$<br>\int_0^\infty f(x)\,\mathrm dx=\int_0^\infty\frac{1}{x^2}f\left(\frac{1}{x}\right)\,\mathrm dx=\int_0^1\left(f(x)+\frac{1}{x^2}f\left(\frac{1}{x}\right)\right)\,\mathrm dx$$</p>
-</blockquote>
-<blockquote>
-<p>Excercise 2. (Applications of Theorem 2.)</p>
-<ol>
-<li>Evaluate \(\displaystyle\int_0^\infty \frac{\ln x}{1+x^2}\,\mathrm dx\)</li>
-<li>Evaluate \(\displaystyle\int_0^\infty\frac{\mathrm dx}{(x+1)^2(x^\pi+1)}\,\mathrm dx\)</li>
-</ol>
-</blockquote>
-<p>Glasser’s Master Theorem</p>
-<hr>
-<h4 id="Feynmann’s-Trick"><a href="#Feynmann’s-Trick" class="headerlink" title="Feynmann’s Trick"></a>Feynmann’s Trick</h4><hr>
-<h4 id="Piecewise-Integration"><a href="#Piecewise-Integration" class="headerlink" title="Piecewise Integration"></a>Piecewise Integration</h4><hr>
-<h4 id="Expanding-Integrand-as-Series"><a href="#Expanding-Integrand-as-Series" class="headerlink" title="Expanding Integrand as Series"></a>Expanding Integrand as Series</h4><hr>
-<h4 id="Changing-to-Iterated-Integral"><a href="#Changing-to-Iterated-Integral" class="headerlink" title="Changing to Iterated Integral"></a>Changing to Iterated Integral</h4><hr>
-<h4 id="Special-Functions"><a href="#Special-Functions" class="headerlink" title="Special Functions"></a>Special Functions</h4><hr>
-<h4 id="Euler-Substitution"><a href="#Euler-Substitution" class="headerlink" title="Euler Substitution"></a>Euler Substitution</h4><hr>
-<h4 id="Contour-Integration"><a href="#Contour-Integration" class="headerlink" title="Contour Integration"></a>Contour Integration</h4><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Group-Theory/">#Group Theory</a></span>
     
     </div>
     
     
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/archives/f5f14030/">The Smith Determinant</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/archives/9f9a665b/">A Collection of Clever Integral Tricks</a>
+            
+        </span>
+    </div>
+    
 </article>
 
 
+<div class="sharebox">
+    
+<div class="addthis_inline_share_toolbox"></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ca2a3a28552765a"></script>
+
+</div>
 
 
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
     
-    
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '204768332e79b6008ca2',
+        clientSecret: '08ff416de4d6f51b0f52cf74610acbdbdee9a07c',
+        id: 'archives/b1c0b801/',
+        repo: 'yunhaixiang.me-comments',
+        owner: 'YunhaiXiang',
+        admin: ['YunhaiXiang'],
+        language: 'en',
+        distractionFreeMode: false,
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</div>
+
     </div>
 </section>
     <footer class="footer">
