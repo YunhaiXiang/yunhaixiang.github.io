@@ -15,14 +15,14 @@
 
 
     <meta name="description" content="Burnside’s lemma is a lemma of elementary group theory that is very useful in counting, and often seen as an “overkill” trick in math competitions. Intuitively, Burnside’s lemma counts the number of a">
-<meta name="keywords" content="Abstract Algebra,Combinatorics,Group Theory">
+<meta name="keywords" content="Combinatorics,Group Theory,Abstract Algebra">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Burnside&#39;s Lemma and Polya Enumeration Theorem">
 <meta property="og:url" content="http://yoursite.com/archives/b1c0b801/index.html">
 <meta property="og:site_name" content="Yunhai Xiang">
 <meta property="og:description" content="Burnside’s lemma is a lemma of elementary group theory that is very useful in counting, and often seen as an “overkill” trick in math competitions. Intuitively, Burnside’s lemma counts the number of a">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-20T17:11:12.010Z">
+<meta property="og:updated_time" content="2020-03-01T13:24:46.825Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Burnside&#39;s Lemma and Polya Enumeration Theorem">
 <meta name="twitter:description" content="Burnside’s lemma is a lemma of elementary group theory that is very useful in counting, and often seen as an “overkill” trick in math competitions. Intuitively, Burnside’s lemma counts the number of a">
@@ -144,7 +144,7 @@
         <span class="column is-narrow">
             
             
-            5 minutes read (About 737 words)
+            5 minutes read (About 738 words)
         </span>
         
     </div>
@@ -162,7 +162,7 @@
 <p>Definition 1. </p>
 <p>Let \(G\) be a group that acts on \(X\), the <strong>orbit</strong> of a point \( x\in X\) is defined as \( G\cdot x=\{g\cdot x\mid g\in G\}  \), the <strong>stabilizer</strong> of a point \( x\in X\) is defined as \( G_x =\{g\in G\mid g\cdot x=x\} \), and the <strong>fixed points</strong> of \(g\in G\) in \(X\) is the set \( X^g=\{x\in X\mid g\cdot x=x\} \). </p>
 </blockquote>
-<p>Note that for \(x,y\in X\), either the orbits \(G\cdot x=G\cdot y\) or \((G\cdot x)\cap (G\cdot y)=\varnothing \). This is an easy result since if \(a\in (G\cdot x)\cap (G\cdot y)\) then \(a=g_1\cdot x=g_2\cdot y\), for some \(g_1,g_2\in G\), so \(x=g_1^{-1}g_2\cdot y\) and \(y=g_2^{-1}g_1\cdot x\), hence \((G\cdot x)\subseteq (G\cdot y)\) and \((G\cdot y)\subseteq (G\cdot x)\). Also, consider the map \(\varphi:G/G_x\rightarrow G\cdot x\) defined by \(\varphi(gG_x)=g\cdot x\). We can easily see that \(\varphi\) is an isomorphism, which gives us \(|G\cdot x|=\left[G:G_x\right]\), also known as the orbit-stabilizer theorem.</p>
+<p>Note that for \(x,y\in X\), either the orbits \(G\cdot x=G\cdot y\) or \((G\cdot x)\cap (G\cdot y)=\varnothing \). This is an easy result since if \(a\in (G\cdot x)\cap (G\cdot y)\) then \(a=g_1\cdot x=g_2\cdot y\), for some \(g_1,g_2\in G\), so \(x=g_1^{-1}g_2\cdot y\) and \(y=g_2^{-1}g_1\cdot x\), hence \((G\cdot x)\subseteq (G\cdot y)\) and \((G\cdot y)\subseteq (G\cdot x)\). Also, consider the map \(\varphi:G/G_x\rightarrow G\cdot x\) defined by \(\varphi(gG_x)=g\cdot x\). We can easily see that \(\varphi\) is an isomorphism, which gives us \(|G\cdot x|=\left[G:G_x\right]\), also known as the orbit-stabilizer theorem.<br><a id="more"></a></p>
 <blockquote>
 <p>Theorem 1 (Burnside’s Lemma). </p>
 <p>Consider a group  \(G\) acting on a set \(X\), then the number of distinct orbits is<br>$$<br>\frac{1}{|G|}\sum_{g\in G}|X^g|$$<div class="spoiler collapsed"><div class="spoiler-title">Proof</div><div class="spoiler-content"><p>Let \(S=\{(g,x)\in G\times X\mid g\cdot x= x\}\), we have<br>$$<br>|S|=\sum_{g\in G}|X^g|<br>$$Let \(B\) be the set of orbits, and by the orbit-stabilizer theorem,<br>$$<br>|S|=\sum_{x\in X}|G_x|=|G|\sum_{x\in X}\frac{1}{|G\cdot x|}=|G|\sum_{A\in B}\sum_{a\in A}\frac{1}{|A|}=|G|\sum_{A\in B}1=|G||B|<br>$$And we are done.</p>
@@ -189,11 +189,11 @@
     
     <div class="columns is-variable is-1 is-multiline is-mobile">
     
-        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Abstract-Algebra/">#Abstract Algebra</a></span>
-    
         <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Combinatorics/">#Combinatorics</a></span>
     
         <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Group-Theory/">#Group Theory</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Abstract-Algebra/">#Abstract Algebra</a></span>
     
     </div>
     
