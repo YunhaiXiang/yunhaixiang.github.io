@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="Yunhai Xiang">
 <meta property="og:description" content="“The language of categories is affectionately known as “abstract nonsense,” so named by Norman Steenrod. This term is essentially accurate and not necessarily derogatory: categories refer to “nonsense">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-06T13:39:48.693Z">
+<meta property="og:updated_time" content="2020-03-07T06:41:16.978Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Basic Notions in Category Theory with Haskell">
 <meta name="twitter:description" content="“The language of categories is affectionately known as “abstract nonsense,” so named by Norman Steenrod. This term is essentially accurate and not necessarily derogatory: categories refer to “nonsense">
@@ -144,7 +144,7 @@
         <span class="column is-narrow">
             
             
-            10 minutes read (About 1518 words)
+            11 minutes read (About 1591 words)
         </span>
         
     </div>
@@ -175,23 +175,26 @@
 <li>The category \(\mathbf{Vect}_{F}\) where \(\mathrm{obj}(\mathbf{Vect}_{F})\) is the class of vector spaces over the field \(F\), \(\mathrm{Hom}_{\mathbf{Vect}_{F}}(A,B)\) is the set of linear maps from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
 <li>The category \(\mathbf{Ban}_{1}\) where \(\mathrm{obj}(\mathbf{Ban}_{1})\) is the class of all Banach spaces, \(\mathrm{Hom}_{\mathbf{Ban}_{1}}(A,B)\) is the set of linear contractions from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
 <li>The category \(\mathbf{Top}\) where \(\mathrm{obj}(\mathbf{Top})\) is the class of all topological spaces, \(\mathrm{Hom}_{\mathbf{Top}}(A,B)\) is the set of continuous mappings from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
+<li>The category \(\mathbf{Haus}\) where \(\mathrm{obj}(\mathbf{Haus})\) is the class of all Hausdorff topological spaces, \(\mathrm{Hom}_{\mathbf{Haus}}(A,B)\) is the set of continuous mappings from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
 <li>The category \(\mathbf{Pos}\) where \(\mathrm{obj}(\mathbf{Pos})\) is the class of all posets, \(\mathrm{Hom}_{\mathbf{Pos}}(A,B)\) is the set of order preserving mappings from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
 <li>The category \(\mathbf{Hask}\) where \(\mathrm{obj}(\mathbf{Hask})\) is the class of all Haskell types, \(\mathrm{Hom}_{\mathbf{Hask}}(\texttt{A},\texttt{B})\) is the class of all Haskell functions (as morphisms) of type \(\texttt{A -&gt; B}\), and the composition of two morphisms \(\texttt{f :: A -&gt; B}\) and \(\texttt{g :: B -&gt; C}\), where \(\mathtt{C}\) is another Haskell type, is the Haskell composition of functiioins \(\texttt{g . f}\).</li>
-<li>The category \(\mathbf{Cat}\) where \(\mathrm{obj}(\mathbf{Cat})\) is the class of all small categories, \(\mathrm{Hom}_{\mathbf{Cat}}(\mathcal{A},\mathcal{B})\) is the class of functors from \(\mathcal{A}\) to \(\mathcal{B}\) as morphisms, and the composition \(\circ\) is the canonical functor composition.</li>
 </ol>
-<p>For part 10, I mentioned functors between categories and functor compositions, which I haven’t defined yet. They will be dealt with later. For now, the most important thing is that you get the gist of what a category is. If you are familiar with abstract algebra, you will notice that many of these examples have similar types of morphisms. Recall, that a bijective homomorphism between groups, rings, or fields is an isomorphism, and a bijective continuous map between topologies that also has a continuous inverse is a homeomorphism. The terms “isomorphism” and “homeomorphism” is essentially the same thing when viewed from a higher angle: they are morphisms that preserve the structure and provide a one-to-one correspondance. Hence the definition,</p>
+<p>The terms “bijection” in sets, “isomorphism” in groups, rings and fields, “homeomorphism” in topologies, and “isometric bijective linear contraction” in Banach spaces are essentially the same thing when viewed from a higher angle: they are morphisms that preserve the structure and provide a one-to-one correspondance. Hence the definition,</p>
 <blockquote><p>Definition 3. A morphism \(f\in\mathrm{Hom}(A,B)\) in some category with objects \(A,B,X\) is </p>
 <ol>
-<li>a <em>monomorphism</em> if it is left-cancellable, that is,<br>$$(f\circ g=f\circ h)\Longrightarrow (g=h)$$for all \(g,h\in\mathrm{Hom}(X,A)\).</li>
-<li>an <em>epimorphism</em> if it is right-cancellable, that is,<br>$$(g\circ f=h\circ f)\Longrightarrow (g=h)$$for all \(g,h\in\mathrm{Hom}(B,X)\).</li>
-<li>a <em>split monomorphism</em> if it has a left inverse, that is, there exist \(g\in\mathrm{Hom}(B,A)\) with \(g\circ f=1_A\)</li>
-<li>a <em>split epimorphism</em> if it has a right inverse, that is, there exist \(g\in\mathrm{Hom}(B,A)\) with \(f\circ g=1_B\)</li>
+<li>an <em>endomorphism</em> if \(A=B\).</li>
+<li>a <em>monomorphism</em> if it is left-cancellable, i.e. \((f\circ g=f\circ h)\Longrightarrow (g=h)\) for all \(g,h\in\mathrm{Hom}(X,A)\).</li>
+<li>an <em>epimorphism</em> if it is right-cancellable, i.e. \((g\circ f=h\circ f)\Longrightarrow (g=h)\) for all \(g,h\in\mathrm{Hom}(B,X)\).</li>
+<li>a <em>split monomorphism</em> if it has a left inverse, i.e. there exist \(g\in\mathrm{Hom}(B,A)\) with \(g\circ f=1_A\)</li>
+<li>a <em>split epimorphism</em> if it has a right inverse, i.e. there exist \(g\in\mathrm{Hom}(B,A)\) with \(f\circ g=1_B\)</li>
 <li>a <em>bimorphism</em> if it is both a monomorphism and an epimorphism</li>
 <li>an <em>isomorphism</em> if it is both a split monomorphism and a split epimorphism.</li>
-<li>an <em>endomorphism</em> if \(A=B\).</li>
 <li>an <em>automorphism</em> if it is an isomorphism and an endomorphism.</li>
 </ol>
-</blockquote><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+<p>Moreover, we use the notations \(\mathrm{End}_{\mathcal{C}}(X)\) and \(\mathrm{Aut}_{\mathcal{C}}(X)\) (or \(\mathrm{End}(X)\) and \(\mathrm{Aut}(X)\) if it does not cause confusion) to denote the class of endomorphisms and automorphisms on the object \(X\) of the category \(\mathcal{C}\), and we write \(A\cong B\) to denote that the objects \(A\) and \(B\) are isomorphic.</p>
+</blockquote>
+<p>It should be obvious to you that a split monomorphism is a monomorphism and a split epimorphism is an epimorphism, which means that an isomorphism is a bimorphism. However, a bimorphism is not necessaily an isomorphism. For example, the natural inclusion \(\mathbf{Z}\rightarrow\mathbf{Q}\) in the category \(\mathbf{Ring}\) is a bimorphism but not an isomorphism, and so are the natural inclusion \(\mathbf{Q}\rightarrow\mathbf{R}\) in the category \(\mathbf{Haus}\) and any non-identity morphism in the category \(\mathbf{Pos}\).</p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
     
     </div>
     
