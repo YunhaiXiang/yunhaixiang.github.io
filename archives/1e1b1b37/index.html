@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head><meta name="generator" content="Hexo 3.8.0">
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-<title>Basic Notions in Category Theory with Haskell - Yunhai Xiang</title>
+<title>Category Theory: An Introduction - Yunhai Xiang</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -17,14 +17,14 @@
     <meta name="description" content="“The language of categories is affectionately known as “abstract nonsense,” so named by Norman Steenrod. This term is essentially accurate and not necessarily derogatory: categories refer to “nonsense">
 <meta name="keywords" content="Abstract Algebra,Category Theory">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Basic Notions in Category Theory with Haskell">
+<meta property="og:title" content="Category Theory: An Introduction">
 <meta property="og:url" content="http://yoursite.com/archives/1e1b1b37/index.html">
 <meta property="og:site_name" content="Yunhai Xiang">
 <meta property="og:description" content="“The language of categories is affectionately known as “abstract nonsense,” so named by Norman Steenrod. This term is essentially accurate and not necessarily derogatory: categories refer to “nonsense">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-07T16:21:56.094Z">
+<meta property="og:updated_time" content="2020-03-09T13:03:18.052Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Basic Notions in Category Theory with Haskell">
+<meta name="twitter:title" content="Category Theory: An Introduction">
 <meta name="twitter:description" content="“The language of categories is affectionately known as “abstract nonsense,” so named by Norman Steenrod. This term is essentially accurate and not necessarily derogatory: categories refer to “nonsense">
 
 
@@ -127,7 +127,7 @@
     <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            Basic Notions in Category Theory with Haskell
+            Category Theory: An Introduction
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
@@ -144,7 +144,7 @@
         <span class="column is-narrow">
             
             
-            16 minutes read (About 2470 words)
+            17 minutes read (About 2510 words)
         </span>
         
     </div>
@@ -157,7 +157,7 @@
 <blockquote>
 <p>Definition 1. (Morphism) A <em>morphism</em> \(f\) from a class \(A\) to a class \(B\) is a triple \((A,B,S)\) where \(S\in\mathcal{U}\). </p>
 </blockquote>
-<p>The class \(A\) is the <em>source</em> of the morphism and \(B\) is the <em>target</em>. We use the notation \(A \stackrel{f}{\longrightarrow} B\) to denote that \(f\) is a morphism from \(A\) to \(B\). A morphism is simply a class that contains all information about its source and target and possibly additional information. A function \(f:A\rightarrow B\) <em>as a morphism</em> from \(A\) to \(B\) is simply a morphism \((A,B,f)\). Let \(C\) be a class. For \(f^\prime:A\rightarrow B\) as a morphism \(f\) from \(A\) to \(B\) and \(g^\prime:B\rightarrow C\) as a morphism \(g\) from \(B\) to \(C\), we define their canonical composition \(g\circ f=(A,C,g^\prime f^\prime)\) where \(g^\prime f^\prime\) is the function composition of \(g^\prime\) and \(f^\prime\).</p>
+<p>The class \(A\) is the <em>source</em> of the morphism and \(B\) is the <em>target</em>. We use the notation \(A \stackrel{f}{\longrightarrow} B\) to denote that \(f\) is a morphism from \(A\) to \(B\). A morphism is simply a class that contains all information about its source and target and possibly additional information. A set \(S\) <em>as a morphism</em> from \(A\) to \(B\) is the morphism \((A,B,S)\). Let \(C\) be a class. For function \(f^\prime:A\rightarrow B\) as a morphism \(f\) from \(A\) to \(B\) and function \(g^\prime:B\rightarrow C\) as a morphism \(g\) from \(B\) to \(C\), we define their canonical composition \(g\circ f=(A,C,g^\prime \circ f^\prime)\) where \(g^\prime \circ f^\prime\) is the function composition of \(g^\prime\) and \(f^\prime\).</p>
 <blockquote><p>Definition 2. (Category) A category \(\mathcal{C}\) consists of a class \(\mathrm{obj}(\mathcal{C})\) whose elements are called the <em>objects</em>, a mapping \(\mathrm{Hom}_{\mathcal{C}}\) with domain \(\mathrm{obj}(\mathcal{C})\times \mathrm{obj}(\mathcal{C})\) that maps \((A,B)\) to a class of morphisms from \(A\) to \(B\), and an operation \(\circ=\bigcup_{A,B,C\in\mathrm{obj}(\mathcal{C})}\circ_{A,B,C}\) called the <em>composition</em> where<br>$$\circ_{A,B,C}:\mathrm{Hom}_{\mathcal{C}}(B,C)\times \mathrm{Hom}_{\mathcal{C}}(A,B)\rightarrow \mathrm{Hom}_{\mathcal{C}}(A,C)<br>$$for all \(A,B,C\in\mathrm{obj}(\mathcal{C})\), that satisfy the following two axioms,</p>
 <ol>
 <li>for all \(A,B,C,D\in\mathrm{obj}(\mathcal{C})\) and for all \(f\in\mathrm{Hom}_{\mathcal{C}}(A,B),g\in\mathrm{Hom}_{\mathcal{C}}(B,C),h\in\mathrm{Hom}_{\mathcal{C}}(C,D)\)<br>$$h\circ (g\circ f)=(h\circ g)\circ f$$</li>
@@ -171,13 +171,10 @@
 <li>The category \(\mathbf{Set}\) where \(\mathrm{obj}(\mathbf{Set})\) is the class of all sets, \(\mathrm{Hom}_{\textbf{Set}}(A,B)\) is the set functions from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
 <li>The category \(\mathbf{Grp}\) where \(\mathrm{obj}(\mathbf{Grp})\) is the class of all groups, \(\mathrm{Hom}_{\mathbf{Grp}}(A,B)\) is the set of group homomorphisms from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
 <li>The category \(\mathbf{Ring}\) where \(\mathrm{obj}(\mathbf{Ring})\) is the class of all rings, \(\mathrm{Hom}_{\mathbf{Ring}}(A,B)\) is the set of ring homomorphisms from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
-<li>The category \(\mathbf{Field}\) where \(\mathrm{obj}(\mathbf{Field})\) is the class of all fields, \(\mathrm{Hom}_{\mathbf{Field}}(A,B)\) is the set of field homomorphisms from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
-<li>The category \(\mathbf{Vect}_{F}\) where \(\mathrm{obj}(\mathbf{Vect}_{F})\) is the class of vector spaces over the field \(F\), \(\mathrm{Hom}_{\mathbf{Vect}_{F}}(A,B)\) is the set of linear maps from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
 <li>The category \(\mathbf{Ban}_{1}\) where \(\mathrm{obj}(\mathbf{Ban}_{1})\) is the class of all Banach spaces, \(\mathrm{Hom}_{\mathbf{Ban}_{1}}(A,B)\) is the set of linear contractions from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
 <li>The category \(\mathbf{Top}\) where \(\mathrm{obj}(\mathbf{Top})\) is the class of all topological spaces, \(\mathrm{Hom}_{\mathbf{Top}}(A,B)\) is the set of continuous mappings from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
 <li>The category \(\mathbf{Haus}\) where \(\mathrm{obj}(\mathbf{Haus})\) is the class of all Hausdorff topological spaces, \(\mathrm{Hom}_{\mathbf{Haus}}(A,B)\) is the set of continuous mappings from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
 <li>The category \(\mathbf{Pos}\) where \(\mathrm{obj}(\mathbf{Pos})\) is the class of all posets, \(\mathrm{Hom}_{\mathbf{Pos}}(A,B)\) is the set of order preserving mappings from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
-<li>The category \(\mathbf{Hask}\) where \(\mathrm{obj}(\mathbf{Hask})\) is the class of all Haskell types, \(\mathrm{Hom}_{\mathbf{Hask}}(\texttt{A},\texttt{B})\) is the class of all Haskell functions (as morphisms) of type \(\texttt{A -&gt; B}\), and the composition of two morphisms \(\texttt{f :: A -&gt; B}\) and \(\texttt{g :: B -&gt; C}\), where \(\mathtt{C}\) is another Haskell type, is the Haskell composition of functiioins \(\texttt{g . f}\).</li>
 </ol>
 <p>Observe that in the above definitions, the terms “bijection” in sets, “isomorphism” in groups, rings and fields, “homeomorphism” in topologies, and “isometric bijective linear contraction” in Banach spaces are essentially the same thing when viewed from a higher angle: they are morphisms that preserve the structure and provide a one-to-one correspondance. Hence the definition,</p>
 <blockquote><p>Definition 3. A morphism \(f\in\mathrm{Hom}(A,B)\) in some category with objects \(A,B,X\) is </p>
@@ -205,11 +202,14 @@
 <ol>
 <li>the identity functor \(1_{\mathcal{C}}\) from \(\mathcal{C}\) to \(\mathcal{C}\) with \(1_{\mathcal{C}}^{\textrm{obj}}:X\mapsto X\) and \(1_{\mathcal{C}}^{\textrm{hom}}:f\mapsto f\)</li>
 <li>the constant functor \(\Delta_{X}\) from \(\mathcal{A}\) to \(\mathcal{B}\) with \(\Delta_{X}^{\mathrm{obj}}:A\mapsto X\) and \(\Delta_{X}^{\mathrm{hom}}:f\mapsto 1_X\) where \(X\in\mathrm{obj}(\mathcal{B})\)</li>
-<li>the <em>diagram</em> \(\mathrm{D}\) of shape \(\mathcal{A}\) in \(\mathcal{B}\) is a functor from \(\mathcal{A}\) to \(\mathcal{B}\) where \(\mathcal{A}\) is small with \(\mathrm{D}^{\textrm{obj}}:X\mapsto X\) and \(\mathrm{D}^{\textrm{hom}}:f\mapsto f\)</li>
 <li>the functor \(\mathrm{F}\) from \(\mathbf{Grp}\) to \(\mathbf{Set}\) with \(\mathrm{F}^{\textrm{obj}}:(G,\cdot)\mapsto G\) and \(\mathrm{F}^{\textrm{hom}}:f\mapsto f\). Functors as such are called <em>forgetful</em> functors, since it forgets its operation. We can also construct forgetful functors from \(\mathbf{Ring}\) to \(\mathbf{Grp}\), and ones from \(\mathbf{Top}\) to \(\mathbf{Set}\), and so on. There is no precise definition for a forgetful functor</li>
-<li>the functor \(\mathrm{Hom}_{\mathcal{C}}(A,-)\) from a locally small category \(\mathcal{C}\), where \(A\in\mathrm{obj}(\mathcal{C})\), to the category \(\mathbf{Set}\), such that the mappings \(\mathrm{Hom}_{\mathcal{C}}(A,-)^{\mathrm{obj}}:X\mapsto \mathrm{Hom}_{\mathcal{C}}(A,X)\) and \(\mathrm{Hom}_{\mathcal{C}}(A,-)^{\mathrm{hom}}:f\mapsto (f\circ -)\) where \(f\circ -\) is the mapping \(g\mapsto f\circ g\) as a morphism. Similarly, we define a presheaf \(\mathrm{Hom}_{\mathcal{C}}(-,B)\) of \(\mathcal{C}\) where \(B\in\mathrm{obj}(\mathcal{C})\), such that the mappings \(\mathrm{Hom}_{\mathcal{C}}(-,B)^{\mathrm{obj}}:X\mapsto \mathrm{Hom}_{\mathcal{C}}(X,B)\) and \(\mathrm{Hom}_{\mathcal{C}}(-,B)^{\mathrm{hom}}:f\mapsto (-\circ f)\) where \(-\circ f\) is the mapping \(g\mapsto g\circ f\) as a morphism.</li>
+<li>the functor \(\mathrm{Hom}_{\mathcal{C}}(A,-)\) from a locally small category \(\mathcal{C}\), where \(A\in\mathrm{obj}(\mathcal{C})\), to the category \(\mathbf{Set}\), such that the mappings \(\mathrm{Hom}_{\mathcal{C}}(A,-)^{\mathrm{obj}}:X\mapsto \mathrm{Hom}_{\mathcal{C}}(A,X)\) and \(\mathrm{Hom}_{\mathcal{C}}(A,-)^{\mathrm{hom}}:f\mapsto (f\circ -)\) where \(f\circ -\) is the mapping \(g\mapsto f\circ g\) as a morphism. Similarly, we define a presheaf \(\mathrm{Hom}_{\mathcal{C}}(-,B)\) of \(\mathcal{C}\) where \(B\in\mathrm{obj}(\mathcal{C})\), such that the mappings \(\mathrm{Hom}_{\mathcal{C}}(-,B)^{\mathrm{obj}}:X\mapsto \mathrm{Hom}_{\mathcal{C}}(X,B)\) and \(\mathrm{Hom}_{\mathcal{C}}(-,B)^{\mathrm{hom}}:f\mapsto (-\circ f)\) where \(-\circ f\) is the mapping \(g\mapsto g\circ f\) as a morphism. These two functor are called the covariant and contravariant <em>hom-functors</em>. Moreover, any functor that is isomorphic to a hom-functor in \(\mathbf{Cat}\) is a <em>representable functor</em>.</li>
 </ol>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+<p>Informally, we use the term “diagram” to refer to a multi-directed-graph, or a quiver, with vertices are objects and edges as morphisms to represent part of a category and a composition for edges. We use different notations for different kinds of morphisms: a hooked arrow \(\hookrightarrow\) to represent a monomorphism, and a double arrow \(\twoheadrightarrow\) for epimorphisms.</p>
+<blockquote><p>Let \(\mathrm{F}\) be a functor from \(\mathcal{A}\) to \(\mathcal{B}\). Let \(\)</p>
+</blockquote>
+<blockquote><p>Definition 5. (Natural Transformation) Let \(\mathrm{F},\mathrm{G}\) be functors from \(\mathcal{A}\) to \(\mathcal{B}\). A <em>natural transformation</em> \(\alpha\) from \(\mathrm{F}\) to \(\mathrm{G}\) is mapping \(\alpha:\mathrm{obj}(\mathcal{A})\rightarrow \mathrm{Mor}(\mathcal{B})\) with \(\alpha:X\mapsto \alpha_X\) such that \(\alpha_{X}\in\mathrm{Hom}_{\mathcal{B}}(\mathrm{F}^{\mathrm{obj}}(X),\mathrm{G}^{\mathrm{obj}}(X))\) and the following diagram commutes for all \(A,B\in\mathrm{obj}(\mathcal{A})\) and for all \(f\in\mathrm{Hom}_{\mathcal{A}}(A,B)\)<br>We use \(\alpha:\mathrm{F}\Rightarrow \mathrm{G}\) to denote \(\alpha\) is a natural transformation from \(\mathrm{F}\) to \(\mathrm{G}\), and we say that \(\alpha_X\) is a <em>component</em> of \(\alpha\) at \(X\). A natural transformation is a <em>natural isomorphism</em> if all its components are isomorphisms.</p>
+</blockquote><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
     
     </div>
     
