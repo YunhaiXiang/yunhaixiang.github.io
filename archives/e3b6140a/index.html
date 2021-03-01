@@ -185,23 +185,28 @@
 
 
 <div class="comments">
-    <h3 class="title is-4">Comments</h3>
     
-<div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<div id="vssue"></div>
+<link rel="stylesheet" href="https://unpkg.com/vssue/dist/vssue.min.css">
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+<script src="https://unpkg.com/vssue/dist/vssue.github.min.js"></script>
 <script>
-    const gitalk = new Gitalk({
-        clientID: '204768332e79b6008ca2',
-        clientSecret: '08ff416de4d6f51b0f52cf74610acbdbdee9a07c',
-        id: 'archives/e3b6140a/',
-        repo: 'yunhaixiang.me-comments',
-        owner: 'YunhaiXiang',
-        admin: ['YunhaiXiang'],
-        language: 'en',
-        distractionFreeMode: false,
+    new Vue({
+        el: '#vssue',
+
+        data: {
+            title: '',
+
+            options: {
+                owner: 'YunhaiXiang',
+                repo: 'MathNotFound-comments',
+                clientId: '9b6b644601c8c4ac091e',
+                clientSecret: '040ac559f2262ddf4ec7c02fc2b5f11b3e4173cb',
+            },
+        },
+
+        template: `<vssue :title="title" :options="options"></vssue>`,
     })
-    gitalk.render('gitalk-container')
 </script>
 
 </div>
