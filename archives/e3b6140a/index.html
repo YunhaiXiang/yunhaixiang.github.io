@@ -188,30 +188,21 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="vssue"></div>
-
-<script src="https://unpkg.com/vue/dist/vue.runtime.min.js"></script>
-<script src="https://unpkg.com/vssue/dist/vssue.github.min.js"></script>
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script>
-    new Vue({
-        el: '#vssue',
-
-        render: h => h('Vssue', {
-            props: {
-                // here set the title of issue of current page
-                title: 'Math Not Found',
-
-                // here set the options for your OAuth App
-                options: {
-                    owner: 'YunhaiXiang',
-                    admin:'YunhaiXiang',
-                    repo: 'MathNotFound-comments',
-                    clientId: '9b6b644601c8c4ac091e',
-                    clientSecret: '3e5985036ab82a3cb565a6694475650384c86295', // only required for some of the platforms
-                },
-            }
-        })
+    const gitalk = new Gitalk({
+        clientID: '9b6b644601c8c4ac091e',
+        clientSecret: '3e5985036ab82a3cb565a6694475650384c86295',
+        id: 'archives/e3b6140a/',
+        repo: 'MathNotFound-comments',
+        owner: 'YunhaiXiang',
+        admin: ['YunhaiXiang'],
+        language: 'en',
+        distractionFreeMode: false,
     })
+    gitalk.render('gitalk-container')
 </script>
 
 </div>
