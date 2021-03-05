@@ -273,25 +273,27 @@
     
 <div id="vssue"></div>
 
-<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+<script src="https://unpkg.com/vue/dist/vue.runtime.min.js"></script>
 <script src="https://unpkg.com/vssue/dist/vssue.github.min.js"></script>
 <script>
     new Vue({
         el: '#vssue',
 
-        data: {
-            title: 'Math Not Found',
+        render: h => h('Vssue', {
+            props: {
+                // here set the title of issue of current page
+                title: 'Math Not Found',
 
-            options: {
-                owner: 'YunhaiXiang',
-                admin: 'YunhaiXiang',
-                repo: 'MathNotFound-comments',
-                clientId: '9b6b644601c8c4ac091e',
-                clientSecret: '3e5985036ab82a3cb565a6694475650384c86295',
-            },
-        },
-
-        template: `<vssue :title="title" :options="options"></vssue>`,
+                // here set the options for your OAuth App
+                options: {
+                    owner: 'YunhaiXiang',
+                    admin:'YunhaiXiang',
+                    repo: 'MathNotFound-comments',
+                    clientId: '9b6b644601c8c4ac091e',
+                    clientSecret: '3e5985036ab82a3cb565a6694475650384c86295', // only required for some of the platforms
+                },
+            }
+        })
     })
 </script>
 
