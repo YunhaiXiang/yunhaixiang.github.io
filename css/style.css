@@ -414,6 +414,10 @@ figure.highlight {
     font-family: inherit !important;
     line-height: 1.5; }
 
+.MathJax_Display, .MJXc-display, .MathJax_SVG_Display {
+  overflow-x: auto;
+  overflow-y: hidden; }
+
 .ins-section-container {
   position: relative;
   background: #f7f7f7; }
