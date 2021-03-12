@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head><meta name="generator" content="Hexo 3.9.0">
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-<title>Tags - Math Not Found</title>
+<title>The Smith Determinant - Math Not Found</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -17,14 +17,18 @@
 
 
 
-    <meta name="keywords" content="Combinatorics,Group Theory,Abstract Algebra,Number Theory,Linear Algebra,Algebra,Category Theory,Calculus,Analysis,Euclidean Geometry,Manim">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Math Not Found">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+    <meta name="description" content="Here’s a curious identity I ran across on AoPS: the determinant of an \(n\times n\) matrix where the \((i,j)\) entries is \(\gcd(i,j)\) happends to be the product of the Euler totient values from \(1\">
+<meta name="keywords" content="Number Theory,Linear Algebra">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Smith Determinant">
+<meta property="og:url" content="http://yoursite.com/archives/f5f14030/index.html">
 <meta property="og:site_name" content="Math Not Found">
+<meta property="og:description" content="Here’s a curious identity I ran across on AoPS: the determinant of an \(n\times n\) matrix where the \((i,j)\) entries is \(\gcd(i,j)\) happends to be the product of the Euler totient values from \(1\">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-03-01T13:23:47.418Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Math Not Found">
+<meta name="twitter:title" content="The Smith Determinant">
+<meta name="twitter:description" content="Here’s a curious identity I ran across on AoPS: the determinant of an \(n\times n\) matrix where the \((i,j)\) entries is \(\gcd(i,j)\) happends to be the product of the Euler totient values from \(1\">
 
 
 
@@ -115,63 +119,114 @@
             </a>
             
             
+            <div class="navbar-item is-hoverable has-dropdown is-hidden-mobile is-hidden-tablet-only toc">
+                <a class="navbar-item" title="Table of Contents">
+                    <i class="fa fa-list"></i>
+                </a>
+                <div class="navbar-dropdown is-right">
+                    
+                    
+                </div>
+            </div>
+            
             
         </div>
     </div>
 </nav>
 
-    <section class="section section-heading">
+    <section class="section">
     <div class="container">
-        <div class="content">
-            <h5>#Tags</h5>
-        </div>
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            The Smith Determinant
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-07-11T17:24:17.000Z" itemprop="datePublished">Jul 12 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Mathematics/">Mathematics</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a minute read (About 213 words)
+        </span>
+        
     </div>
-</section>
-<section class="section">
-    <div class="container">
-        <div class="columns is-variable is-1 is-multiline is-mobile">
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>Here’s a curious identity I ran across on AoPS: the determinant of an \(n\times n\) matrix where the \((i,j)\) entries is \(\gcd(i,j)\) happends to be the product of the Euler totient values from \(1\) to \(n\).</p>
+<blockquote>
+<p>Theorem (Smith’s Determinant).<br>$$<br>\det\begin{pmatrix}<br>\gcd(1,1)&amp;\gcd(1,2)&amp;\cdots&amp;\gcd(1,n)\\<br>\gcd(2,1)&amp;\gcd(2,2)&amp;\cdots&amp;\gcd(2,n)\\<br>\vdots &amp; \vdots &amp; \ddots &amp;\vdots\\<br>\gcd(n,1)&amp;\gcd(n,2)&amp;\cdots&amp;\gcd(n,n)<br>\end{pmatrix}=\prod_{m=1}^n\varphi(m)<br>$$where \(\varphi(\cdot)\) is the Euler totient function.</p>
+</blockquote>
+<p>The proof of this result is surprisingly simple: to describe it briefly, multiply the first row by \(-1\) and add it to the \(2,3,4,…,n\) rows, multiply the second row by \(-1\) and add it to the \(2,4,6,…\) rows, multiply the third row by \(-1\) and add it to the \(3,6,9,…\) rows, and so on. Then use of the identity \(\sum_{d\mid n}\varphi(d)=n\) to simplify. Another method is to use of UD decomposition, decomposing the original matrix into<br>$$<br>\begin{pmatrix}<br>\varphi(1)&amp;0&amp;0&amp;0&amp;0&amp;\cdots\\<br>\varphi(1)&amp;\varphi(2)&amp;0&amp;0&amp;0&amp;\cdots\\<br>\varphi(1)&amp;0&amp;\varphi(3)&amp;0&amp;0&amp;\cdots\\<br>\varphi(1)&amp;\varphi(2)&amp;0&amp;\varphi(4)&amp;0&amp;\cdots\\<br>\varphi(1)&amp;0&amp;0&amp;0&amp;\varphi(5)&amp;\cdots\\<br>\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots\\<br>\end{pmatrix}<br>\begin{pmatrix}<br>1&amp;1&amp;1&amp;1&amp;1&amp;\cdots\\<br>0&amp;1&amp;0&amp;1&amp;0&amp;\cdots\\<br>0&amp;0&amp;1&amp;0&amp;0&amp;\cdots\\<br>0&amp;0&amp;0&amp;1&amp;0&amp;\cdots\\<br>0&amp;0&amp;0&amp;0&amp;1&amp;\cdots\\<br>\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots\\<br>\end{pmatrix}<br>$$And hence by the multiplicative property of determinants, we have our desired result.</p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Number-Theory/">#Number Theory</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Linear-Algebra/">#Linear Algebra</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
             
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Combinatorics/">#Combinatorics&nbsp;(1)</a>
-            </span>
+            <a href="/archives/e3b6140a/">Nine Point Circle and Feuerbach&#39;s Theorem</a>
             
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Group-Theory/">#Group Theory&nbsp;(1)</a>
-            </span>
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
             
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Abstract-Algebra/">#Abstract Algebra&nbsp;(3)</a>
-            </span>
+            <a href="/archives/b1c0b801/">Burnside&#39;s Lemma and Polya Enumeration Theorem</a>
             
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Number-Theory/">#Number Theory&nbsp;(2)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Linear-Algebra/">#Linear Algebra&nbsp;(1)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Category-Theory/">#Category Theory&nbsp;(1)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Calculus/">#Calculus&nbsp;(1)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Analysis/">#Analysis&nbsp;(1)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Euclidean-Geometry/">#Euclidean Geometry&nbsp;(1)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Manim/">#Manim&nbsp;(1)</a>
-            </span>
-            
-        </div>
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="addthis_inline_share_toolbox"></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-603b815e662e1491"></script>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '9b6b644601c8c4ac091e',
+        clientSecret: '3e5985036ab82a3cb565a6694475650384c86295',
+        id: 'archives/f5f14030/',
+        repo: 'MathNotFound-comments',
+        owner: 'YunhaiXiang',
+        admin: ['YunhaiXiang'],
+        language: 'en',
+        distractionFreeMode: false,
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</div>
+
     </div>
 </section>
     <footer class="footer">

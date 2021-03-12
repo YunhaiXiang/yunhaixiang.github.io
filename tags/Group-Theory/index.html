@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head><meta name="generator" content="Hexo 3.9.0">
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-<title>Tags - Math Not Found</title>
+<title>Tag: Group Theory - Math Not Found</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -17,10 +17,10 @@
 
 
 
-    <meta name="keywords" content="Combinatorics,Group Theory,Abstract Algebra,Number Theory,Linear Algebra,Algebra,Category Theory,Calculus,Analysis,Euclidean Geometry,Manim">
+    <meta name="keywords" content="Math">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Math Not Found">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/Group-Theory/index.html">
 <meta property="og:site_name" content="Math Not Found">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
@@ -123,55 +123,66 @@
     <section class="section section-heading">
     <div class="container">
         <div class="content">
-            <h5>#Tags</h5>
+            <h5>#Group Theory</h5>
         </div>
     </div>
 </section>
 <section class="section">
     <div class="container">
-        <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/archives/b1c0b801/" itemprop="url">Burnside&#39;s Lemma and Polya Enumeration Theorem</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-07-11T13:41:07.000Z" itemprop="datePublished">Jul 11 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Mathematics/">Mathematics</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
             
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Combinatorics/">#Combinatorics&nbsp;(1)</a>
-            </span>
             
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Group-Theory/">#Group Theory&nbsp;(1)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Abstract-Algebra/">#Abstract Algebra&nbsp;(3)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Number-Theory/">#Number Theory&nbsp;(2)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Linear-Algebra/">#Linear Algebra&nbsp;(1)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Category-Theory/">#Category Theory&nbsp;(1)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Calculus/">#Calculus&nbsp;(1)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Analysis/">#Analysis&nbsp;(1)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Euclidean-Geometry/">#Euclidean Geometry&nbsp;(1)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Manim/">#Manim&nbsp;(1)</a>
-            </span>
-            
-        </div>
+            5 minutes read (About 738 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>Burnside’s lemma is a lemma of elementary group theory that is very useful in counting, and often seen as an “overkill” trick in math competitions. Intuitively, Burnside’s lemma counts the number of arrangements or permutations of an object if some of its symmetries are considered identical. For example, </p>
+<blockquote>
+<p>Example 1. </p>
+<p>How many distinct colorings can be obtained with \(6\) different colors to color the faces of a cube? Two configurations are considered identical if one can be obtained from the other through rotation.</p>
+<div class="spoiler collapsed"><div class="spoiler-title">Solution</div><div class="spoiler-content"><p>There are \(30\) distinct colorings. Consider the group of rotations of a cube \(G\) acting on \(\mathrm{S}_6\), there are \(3\times 3=9\) rotations about opposite faces, \(6\times 1 = 6\) rotations about opposite edges, and \(4\times 2=8\) rotations about opposite vertices. Together with the identity rotation we have \(|G|=9+6+8+1=24\) (in fact, \(G\) is isomorphic to \(\mathrm{S}_4 \)). For \(g=e\), we have \(X^g=X\), and for \(g\ne e\), we have \(X^g=\varnothing\) since all colors on the faces are different. Hence the number of orbits is<br>$$<br>\frac{1}{|G|}\sum_{g\in G}|X^g|=\frac{|X|}{|G|}=\frac{6!}{24}=30<br>$$which means that there are \(30\) distinct colorings.</p>
+</div></div>
+</blockquote>
+<p>To approach such problem, we start with the definitions of orbits, stabilizers, and fixed points in group actions.</p>
+<blockquote>
+<p>Definition 1. </p>
+<p>Let \(G\) be a group that acts on \(X\), the <strong>orbit</strong> of a point \( x\in X\) is defined as \( G\cdot x=\{g\cdot x\mid g\in G\}  \), the <strong>stabilizer</strong> of a point \( x\in X\) is defined as \( G_x =\{g\in G\mid g\cdot x=x\} \), and the <strong>fixed points</strong> of \(g\in G\) in \(X\) is the set \( X^g=\{x\in X\mid g\cdot x=x\} \). </p>
+</blockquote>
+<p>Note that for \(x,y\in X\), either the orbits \(G\cdot x=G\cdot y\) or \((G\cdot x)\cap (G\cdot y)=\varnothing \). This is an easy result since if \(a\in (G\cdot x)\cap (G\cdot y)\) then \(a=g_1\cdot x=g_2\cdot y\), for some \(g_1,g_2\in G\), so \(x=g_1^{-1}g_2\cdot y\) and \(y=g_2^{-1}g_1\cdot x\), hence \((G\cdot x)\subseteq (G\cdot y)\) and \((G\cdot y)\subseteq (G\cdot x)\). Also, consider the map \(\varphi:G/G_x\rightarrow G\cdot x\) defined by \(\varphi(gG_x)=g\cdot x\). We can easily see that \(\varphi\) is an isomorphism, which gives us \(|G\cdot x|=\left[G:G_x\right]\), also known as the orbit-stabilizer theorem.<br></p>
+        <p class="article-more-link">
+            <a href="/archives/b1c0b801/#more">Read More</a>
+        </p>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+    
     </div>
 </section>
     <footer class="footer">

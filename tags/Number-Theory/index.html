@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head><meta name="generator" content="Hexo 3.9.0">
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-<title>Tags - Math Not Found</title>
+<title>Tag: Number Theory - Math Not Found</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -17,10 +17,10 @@
 
 
 
-    <meta name="keywords" content="Combinatorics,Group Theory,Abstract Algebra,Number Theory,Linear Algebra,Algebra,Category Theory,Calculus,Analysis,Euclidean Geometry,Manim">
+    <meta name="keywords" content="Math">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Math Not Found">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/Number-Theory/index.html">
 <meta property="og:site_name" content="Math Not Found">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
@@ -123,55 +123,98 @@
     <section class="section section-heading">
     <div class="container">
         <div class="content">
-            <h5>#Tags</h5>
+            <h5>#Number Theory</h5>
         </div>
     </div>
 </section>
 <section class="section">
     <div class="container">
-        <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/archives/f5f14030/" itemprop="url">The Smith Determinant</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-07-11T17:24:17.000Z" itemprop="datePublished">Jul 12 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Mathematics/">Mathematics</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
             
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Combinatorics/">#Combinatorics&nbsp;(1)</a>
-            </span>
             
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Group-Theory/">#Group Theory&nbsp;(1)</a>
-            </span>
+            a minute read (About 213 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>Here’s a curious identity I ran across on AoPS: the determinant of an \(n\times n\) matrix where the \((i,j)\) entries is \(\gcd(i,j)\) happends to be the product of the Euler totient values from \(1\) to \(n\).</p>
+<blockquote>
+<p>Theorem (Smith’s Determinant).<br>$$<br>\det\begin{pmatrix}<br>\gcd(1,1)&amp;\gcd(1,2)&amp;\cdots&amp;\gcd(1,n)\\<br>\gcd(2,1)&amp;\gcd(2,2)&amp;\cdots&amp;\gcd(2,n)\\<br>\vdots &amp; \vdots &amp; \ddots &amp;\vdots\\<br>\gcd(n,1)&amp;\gcd(n,2)&amp;\cdots&amp;\gcd(n,n)<br>\end{pmatrix}=\prod_{m=1}^n\varphi(m)<br>$$where \(\varphi(\cdot)\) is the Euler totient function.</p>
+</blockquote>
+<p>The proof of this result is surprisingly simple: to describe it briefly, multiply the first row by \(-1\) and add it to the \(2,3,4,…,n\) rows, multiply the second row by \(-1\) and add it to the \(2,4,6,…\) rows, multiply the third row by \(-1\) and add it to the \(3,6,9,…\) rows, and so on. Then use of the identity \(\sum_{d\mid n}\varphi(d)=n\) to simplify. Another method is to use of UD decomposition, decomposing the original matrix into<br>$$<br>\begin{pmatrix}<br>\varphi(1)&amp;0&amp;0&amp;0&amp;0&amp;\cdots\\<br>\varphi(1)&amp;\varphi(2)&amp;0&amp;0&amp;0&amp;\cdots\\<br>\varphi(1)&amp;0&amp;\varphi(3)&amp;0&amp;0&amp;\cdots\\<br>\varphi(1)&amp;\varphi(2)&amp;0&amp;\varphi(4)&amp;0&amp;\cdots\\<br>\varphi(1)&amp;0&amp;0&amp;0&amp;\varphi(5)&amp;\cdots\\<br>\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots\\<br>\end{pmatrix}<br>\begin{pmatrix}<br>1&amp;1&amp;1&amp;1&amp;1&amp;\cdots\\<br>0&amp;1&amp;0&amp;1&amp;0&amp;\cdots\\<br>0&amp;0&amp;1&amp;0&amp;0&amp;\cdots\\<br>0&amp;0&amp;0&amp;1&amp;0&amp;\cdots\\<br>0&amp;0&amp;0&amp;0&amp;1&amp;\cdots\\<br>\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\ddots\\<br>\end{pmatrix}<br>$$And hence by the multiplicative property of determinants, we have our desired result.</p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/archives/ad21318b/" itemprop="url">Quadratic Reciprocity Times Three</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-02-21T06:09:24.000Z" itemprop="datePublished">Feb 21 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Mathematics/">Mathematics</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
             
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Abstract-Algebra/">#Abstract Algebra&nbsp;(3)</a>
-            </span>
             
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Number-Theory/">#Number Theory&nbsp;(2)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Linear-Algebra/">#Linear Algebra&nbsp;(1)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Category-Theory/">#Category Theory&nbsp;(1)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Calculus/">#Calculus&nbsp;(1)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Analysis/">#Analysis&nbsp;(1)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Euclidean-Geometry/">#Euclidean Geometry&nbsp;(1)</a>
-            </span>
-            
-            <span class="column is-narrow">
-                <a class="tag is-light article-tag" href="/tags/Manim/">#Manim&nbsp;(1)</a>
-            </span>
-            
-        </div>
+            3 minutes read (About 412 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>Besides the Pythagorean theorem and the fundamental theorem of algebra, the law of <em>Quadratic Reciprocity</em> is probably the most oftenly proved theorem in math. In fact, on <a href="http://www.rzuser.uni-heidelberg.de/~hb3/fchrono.html" target="_blank" rel="noopener">this</a> website you can find 246 different proofs (collected by the mathematician Franz Lemmermeyer) of the theorem. In this article, I will discuss a few of them that I thought are the best ones. First, we define what a <em>quadratic residue</em> is. </p>
+<p><em>Definition.</em> For an odd prime $p$ and an integer $a\in\mathbf{Z}$ coprime to $p$, if there exists $n\in\mathbf{Z}$ such that $ a\equiv n^2\pmod{p}$ then we say that $a$ is a quadratic residue modulo $p$ (a quadratic non-residue otherwise).</p>
+<p>It is easy to see that in $\mathbf{Z}/p\mathbf{Z}$ there are exactly $\frac{p-1}{2}$ quadratic residues, namely, $1^2,2^2,\dots,\left(\frac{p-1}{2}\right)^2$. To see this, note that if $i^2\equiv j^2\pmod{p}$ for $1\le i,j\le \frac{p-1}{2}$, then $p\mid (i+j)(i-j)$ but $2\le i+j\le p-1$ so $i\equiv j\pmod{p}$. Next we introduce the Legendre symbol, with which we can write the law of quadratic reciprocity concisely.</p>
+<p><em>Definition</em>. For an odd prime $p$ and $a\in \mathbf{Z}$<br>$$<br>\left(\dfrac{a}{p}\right):=<br>\left\{\begin{matrix}<br>1&amp;a\mathrm{\; is\; a\; quadratic\; residue\; modulo\;}p\\<br>-1&amp;a\mathrm{\; is\; a\; quadratic\; nonresidue\; modulo\;}p\\<br>0&amp;a\equiv 0\pmod{p}\\<br>\end{matrix}\right.<br>$$<br><em>Theorem (Quadratic Reciprocity)</em>. If $p,q$ are two distinct odd primes, then<br>$$<br>\left(\dfrac{p}{q}\right)\left(\dfrac{q}{p}\right)=(-1)^{\frac{p-1}{2}\cdot \frac{q-1}{2}}<br>$$<br>To prove this, we first introduce a useful lemma by Euler. By Fermat’s little theorem, in $(\mathbf{Z}/p\mathbf{Z})[x]$, the polynomial $x^{p-1}-1=(x^{\frac{p-1}{2}}+1)(x^{\frac{p-1}{2}}-1)$ takes on roots over all nonzero residues. And, since if $a\equiv n^2\pmod{p}$ is a quadratic residue, then $a^{\frac{p-1}{2}}\equiv n^{p-1}\equiv 1\pmod{p}$, the quadratic residues are precisely roots of ​$x^{\frac{p-1}{2}}-1$, in other words,</p>
+<p><em>Lemma (Euler’s Criterion)</em>. For an odd prime $p$ and $a\in \mathbf{Z}$<br>$$<br>\left(\frac{a}{p}\right)=a^{\frac{p-1}{2}}\pmod{p}<br>$$<br>This immediately gives the corollary that the Legendre symbol is a completely multiplicative function, that is  $\left(\frac{ab}{p}\right)=\left(\frac{a}{p}\right)\left(\frac{b}{p}\right)$ for $a,b\in\mathbf{Z}$ and odd prime $p$.</p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+    
     </div>
 </section>
     <footer class="footer">

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+<title>Category Theory: An Introduction - Math Not Found</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+<link rel="stylesheet" href="https://unpkg.com/vssue/dist/vssue.min.css">
+
+
+
+
+
+
+<meta name="keywords" content="Math">
+
+
+
+    <meta name="description" content="“The language of categories is affectionately known as “abstract nonsense,” so named by Norman Steenrod. This term is essentially accurate and not necessarily derogatory: categories refer to “nonsense">
+<meta name="keywords" content="Abstract Algebra,Category Theory">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Category Theory: An Introduction">
+<meta property="og:url" content="http://yoursite.com/archives/1e1b1b37/index.html">
+<meta property="og:site_name" content="Math Not Found">
+<meta property="og:description" content="“The language of categories is affectionately known as “abstract nonsense,” so named by Norman Steenrod. This term is essentially accurate and not necessarily derogatory: categories refer to “nonsense">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-03-09T13:03:18.052Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Category Theory: An Introduction">
+<meta name="twitter:description" content="“The language of categories is affectionately known as “abstract nonsense,” so named by Norman Steenrod. This term is essentially accurate and not necessarily derogatory: categories refer to “nonsense">
+
+
+
+
+
+<link rel="icon" href="/images/favicon_package_v0/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_package_v0/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/favicon_package_v0/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/favicon_package_v0/android-chrome-512x512.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_package_v0/android-chrome-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_package_v0/android-chrome-32x32.png">
+<link rel="manifest" href="/images/favicon_package_v0/site.webmanifest">
+<link rel="mask-icon" href="/images/favicon_package_v0/safari-pinned-tab.svg" color="#ff8a00">
+<meta name="msapplication-TileColor" content="#ff8a00">
+<meta name="msapplication-TileImage" content="/images/favicon_package_v0/mstile-144x144.png">
+<meta name="msapplication-square70x70logo" content="/images/favicon_package_v0/mstile-70x70.png">
+<meta name="msapplication-square150x150logo" content="/images/favicon_package_v0/mstile-150x150.png">
+<meta name="msapplication-wide310x150logo" content="/images/favicon_package_v0/mstile-310x150.png">
+<meta name="msapplication-square310x310logo" content="/images/favicon_package_v0/mstile-310x310.png">
+<meta name="theme-color" content="#ff8a00">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+
+</head>
+<body>
+    
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    <img src="/images/home-solid.png" alt height="28">
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/.">Home</a>
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/coursework">Coursework</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            <div class="navbar-item is-hoverable has-dropdown is-hidden-mobile is-hidden-tablet-only toc">
+                <a class="navbar-item" title="Table of Contents">
+                    <i class="fa fa-list"></i>
+                </a>
+                <div class="navbar-dropdown is-right">
+                    
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            Category Theory: An Introduction
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2020-03-04T04:55:06.000Z" itemprop="datePublished">Mar 4 2020</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Mathematics/">Mathematics</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            17 minutes read (About 2510 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <blockquote class="pullquote"><p>“The language of categories is affectionately known as “abstract nonsense,” so named by Norman Steenrod. This term is essentially accurate and not necessarily derogatory: categories refer to “nonsense” in the sense that they are all about the “structure,” and not about the “meaning,” of what they represent.” </p>
+<p><em>—Paolo Aluffi, Algebra: Chapter 0</em></p>
+</blockquote>
+<p>Introduced in the 1940s by Mac Lane and Eilenberg in a paper titled “General Theory of Natural Equivalences”, Category theory is a branch of mathematics that aims to unify various mathematical structures from different fields and provide generalized concepts and theorems, and is thus known for its abstractness and generality. In this post, I am going to explain two important concepts in category theory: the Yoneda Lemma and the universal property. I am assuming that the reader understands introductory abstract algebra (knows the definition of groups, rings, fields, vector spaces and modules) and perferably some topology. Throughout this post, we accept the Zermelo-Fraenkel axioms as our foundations, and use \(\mathcal{U}\) to refer to the universe of all sets. However, it should also be noted that there are other books relating category theory where the universe \(\mathcal{U}\) in discussion is not the universe of all set but rather something else such as the Grothendieck Universe, which is not a topic of discussion in this post.<br><a id="more"></a></p>
+<blockquote>
+<p>Definition 1. (Morphism) A <em>morphism</em> \(f\) from a class \(A\) to a class \(B\) is a triple \((A,B,S)\) where \(S\in\mathcal{U}\). </p>
+</blockquote>
+<p>The class \(A\) is the <em>source</em> of the morphism and \(B\) is the <em>target</em>. We use the notation \(A \stackrel{f}{\longrightarrow} B\) to denote that \(f\) is a morphism from \(A\) to \(B\). A morphism is simply a class that contains all information about its source and target and possibly additional information. A set \(S\) <em>as a morphism</em> from \(A\) to \(B\) is the morphism \((A,B,S)\). Let \(C\) be a class. For function \(f^\prime:A\rightarrow B\) as a morphism \(f\) from \(A\) to \(B\) and function \(g^\prime:B\rightarrow C\) as a morphism \(g\) from \(B\) to \(C\), we define their canonical composition \(g\circ f=(A,C,g^\prime \circ f^\prime)\) where \(g^\prime \circ f^\prime\) is the function composition of \(g^\prime\) and \(f^\prime\).</p>
+<blockquote><p>Definition 2. (Category) A category \(\mathcal{C}\) consists of a class \(\mathrm{obj}(\mathcal{C})\) whose elements are called the <em>objects</em>, a mapping \(\mathrm{Hom}_{\mathcal{C}}\) with domain \(\mathrm{obj}(\mathcal{C})\times \mathrm{obj}(\mathcal{C})\) that maps \((A,B)\) to a class of morphisms from \(A\) to \(B\), and an operation \(\circ=\bigcup_{A,B,C\in\mathrm{obj}(\mathcal{C})}\circ_{A,B,C}\) called the <em>composition</em> where<br>$$\circ_{A,B,C}:\mathrm{Hom}_{\mathcal{C}}(B,C)\times \mathrm{Hom}_{\mathcal{C}}(A,B)\rightarrow \mathrm{Hom}_{\mathcal{C}}(A,C)<br>$$for all \(A,B,C\in\mathrm{obj}(\mathcal{C})\), that satisfy the following two axioms,</p>
+<ol>
+<li>for all \(A,B,C,D\in\mathrm{obj}(\mathcal{C})\) and for all \(f\in\mathrm{Hom}_{\mathcal{C}}(A,B),g\in\mathrm{Hom}_{\mathcal{C}}(B,C),h\in\mathrm{Hom}_{\mathcal{C}}(C,D)\)<br>$$h\circ (g\circ f)=(h\circ g)\circ f$$</li>
+<li>for all \(X\in\mathrm{obj}(\mathcal{C})\), there exists \(1_X\in\mathrm{Hom}_{\mathcal{C}}(X,X)\) such that for all \(A,B\in\mathrm{obj}(\mathcal{C})\) and \(f\in\mathrm{Hom}_{\mathcal{C}}(A,B)\)<br>$$f\circ 1_A=1_B\circ f=f$$where we call \(1_X\) the <em>identity morphism</em> of \(X\).</li>
+</ol>
+<p>Moreover, A category \(\mathcal{C}\) is <em>locally small</em> if \(\mathrm{Hom}_{\mathcal{C}}(A,B)\in \mathcal{U}\) for all \(A,B\in\mathrm{obj}(\mathcal{C})\) and <em>small</em> if it is locally small and \(\mathrm{obj}(\mathcal{C})\in\mathcal{U}\). Let \(\mathrm{Mor}(\mathcal{C}):=\mathrm{image}(\mathrm{Hom}_{\mathcal{c}})\) be the class of morphisms of the category \(\mathcal{C}\).</p>
+</blockquote>
+<p>In instances where it does not cause confusion, we usually omit the subscripts in \(\mathrm{Hom}_{\mathcal{C}}\) and simply write \(\mathrm{Hom}\). I should emphasize that morphisms need not be functions as morphisms. In fact, in a way, a category is a multigraph with an operation on its edges set that satisfies something similar to the two axioms in the above definition. If \(A,B\) are finite sets, then there are only finitely many functions from \(A\) to \(B\) set-theoretically speaking, but there are infinitely many morphisms from \(A\) to \(B\). In addition, we should consider \(\mathrm{Hom}(A,B)\) and \(\mathrm{Hom}(C,D)\) disjoint unless \(A=C\) and \(B=D\). </p>
+<p>To give you an idea, here are some examples of categories</p>
+<ol>
+<li>The category \(\mathbf{Set}\) where \(\mathrm{obj}(\mathbf{Set})\) is the class of all sets, \(\mathrm{Hom}_{\textbf{Set}}(A,B)\) is the set functions from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
+<li>The category \(\mathbf{Grp}\) where \(\mathrm{obj}(\mathbf{Grp})\) is the class of all groups, \(\mathrm{Hom}_{\mathbf{Grp}}(A,B)\) is the set of group homomorphisms from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
+<li>The category \(\mathbf{Ring}\) where \(\mathrm{obj}(\mathbf{Ring})\) is the class of all rings, \(\mathrm{Hom}_{\mathbf{Ring}}(A,B)\) is the set of ring homomorphisms from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
+<li>The category \(\mathbf{Ban}_{1}\) where \(\mathrm{obj}(\mathbf{Ban}_{1})\) is the class of all Banach spaces, \(\mathrm{Hom}_{\mathbf{Ban}_{1}}(A,B)\) is the set of linear contractions from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
+<li>The category \(\mathbf{Top}\) where \(\mathrm{obj}(\mathbf{Top})\) is the class of all topological spaces, \(\mathrm{Hom}_{\mathbf{Top}}(A,B)\) is the set of continuous mappings from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
+<li>The category \(\mathbf{Haus}\) where \(\mathrm{obj}(\mathbf{Haus})\) is the class of all Hausdorff topological spaces, \(\mathrm{Hom}_{\mathbf{Haus}}(A,B)\) is the set of continuous mappings from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
+<li>The category \(\mathbf{Pos}\) where \(\mathrm{obj}(\mathbf{Pos})\) is the class of all posets, \(\mathrm{Hom}_{\mathbf{Pos}}(A,B)\) is the set of order preserving mappings from \(A\) to \(B\) as morphisms, and the composition \(\circ\) is the canonical composition. </li>
+</ol>
+<p>Observe that in the above definitions, the terms “bijection” in sets, “isomorphism” in groups, rings and fields, “homeomorphism” in topologies, and “isometric bijective linear contraction” in Banach spaces are essentially the same thing when viewed from a higher angle: they are morphisms that preserve the structure and provide a one-to-one correspondance. Hence the definition,</p>
+<blockquote><p>Definition 3. A morphism \(f\in\mathrm{Hom}(A,B)\) in some category with objects \(A,B,X\) is </p>
+<ol>
+<li>an <em>endomorphism</em> if \(A=B\).</li>
+<li>a <em>monomorphism</em> if it is left-cancellable, i.e. \((f\circ g=f\circ h)\Longrightarrow (g=h)\) for all \(g,h\in\mathrm{Hom}(X,A)\).</li>
+<li>an <em>epimorphism</em> if it is right-cancellable, i.e. \((g\circ f=h\circ f)\Longrightarrow (g=h)\) for all \(g,h\in\mathrm{Hom}(B,X)\).</li>
+<li>a <em>split monomorphism</em> if it has a left inverse, i.e. there exist \(g\in\mathrm{Hom}(B,A)\) with \(g\circ f=1_A\)</li>
+<li>a <em>split epimorphism</em> if it has a right inverse, i.e. there exist \(g\in\mathrm{Hom}(B,A)\) with \(f\circ g=1_B\)</li>
+<li>a <em>bimorphism</em> if it is both a monomorphism and an epimorphism</li>
+<li>an <em>isomorphism</em> if it is both a split monomorphism and a split epimorphism.</li>
+<li>an <em>automorphism</em> if it is an isomorphism and an endomorphism.</li>
+</ol>
+<p>Moreover, we use the notations \(\mathrm{End}_{\mathcal{C}}(X)\) and \(\mathrm{Aut}_{\mathcal{C}}(X)\) (or \(\mathrm{End}(X)\) and \(\mathrm{Aut}(X)\) if it does not cause confusion) to denote the class of endomorphisms and automorphisms on the object \(X\) of the category \(\mathcal{C}\), and we write \(A\cong B\) to denote that the objects \(A\) and \(B\) are isomorphic.</p>
+</blockquote>
+<p>Monomorphisms and epimorphisms are generalizations of injections and surjections, and in fact the monomorphisms and epimorphisms in \(\mathbf{Set}\) are precisely the injections and surjections. It should be obvious to you that a split monomorphism is a monomorphism and a split epimorphism is an epimorphism, which means that an isomorphism is a bimorphism. However, a bimorphism is not necessaily an isomorphism. For example, the natural inclusion \(\mathbf{Z}\rightarrow\mathbf{Q}\) in the category \(\mathbf{Ring}\) is a bimorphism but not an isomorphism, and so are the natural inclusion \(\mathbf{Q}\rightarrow\mathbf{R}\) in the category \(\mathbf{Haus}\) and any non-identity morphism in the category \(\mathbf{Pos}\). Moreover, A small category where every morphism is an isomorphism is a <em>groupoid</em>. There is this joke that we can define a group as a groupoid with a single object, and it would make total sense mathematically, but “most mathematicians will find it ludicrous to introduce groups in this fasion, or they will at the very least politely express doubts on the pedagogical effectiveness of doing so”, as said by Paolo Aluffi.</p>
+<p>Much like the morphisms in the previously mentioned categories, we can also define structure preserving maps between categories. In fact, the category \(\mathbf{Cat}\) is such that \(\mathrm{obj}(\mathbf{Cat})\) is the class of small categories, and for small categories \(\mathcal{A}\) and \(\mathcal{B}\), define \(\mathrm{Hom}_{\textbf{Cat}}(\mathcal{A},\mathcal{B})\) as the class of functors from the category \(\mathcal{A}\) to the category \(\mathcal{B}\) as morphisms, where the notion of functors are defined as follows.<br><blockquote><p>Definition 4. (Functors) Let \(\mathcal{A},\mathcal{B}\) be categories. A (covariant) functor \(\mathrm{F}\) from \(\mathcal{A}\) to \(\mathcal{B}\) is a pair of functions \((\mathrm{F}^{\mathrm{obj}},\mathrm{F}^{\mathrm{hom}})\) such that \(\mathrm{F}^{\mathrm{obj}}:\mathrm{obj}(\mathcal{A})\rightarrow \mathrm{obj}(\mathcal{B})\) and \(\mathrm{F}^{\mathrm{hom}}:\mathrm{Mor}(\mathcal{A})\rightarrow \mathrm{Mor}(\mathcal{B})\) and for all \(X,Y,Z\in\mathrm{obj}(\mathcal{A})\)</p>
+<ol>
+<li>\(\mathrm{F}^{\mathrm{hom}}(1_X)=1_{\mathrm{F}^{\mathrm{obj}}(X)}\) </li>
+<li>if \(f\in\mathrm{Hom}_{\mathcal{A}}(X,Y)\) then \(\mathrm{F}^{\mathrm{hom}}(f)\in\mathrm{Hom}_{\mathcal{B}}(\mathrm{F}^{\mathrm{obj}}(X),\mathrm{F}^{\mathrm{obj}}(Y))\)</li>
+<li>\(\mathrm{F}^{\mathrm{hom}}(g\circ_{\mathcal{A}} f)=\mathrm{F}^{\mathrm{hom}}(g)\circ_{\mathcal{B}} \mathrm{F}^{\mathrm{hom}}(f)\) for all \(f\in\mathrm{Hom}_{\mathcal{A}}(X,Y)\) and \(g\in\mathrm{Hom}_{\mathcal{A}}(Y,Z)\)</li>
+</ol>
+<p>where \(\circ_{\mathcal{A}},\circ_{\mathcal{B}}\) represents the composition operation in the categories \(\mathcal{A},\mathcal{B}\) respectively. Moreover, the composition of two functors \(\mathrm{F}\circ \mathrm{G}\) is the pairwise composition of their object function and morphism function, i.e. \(\mathrm{F}\circ\mathrm{G}=(\mathrm{F}^{\mathrm{obj}}\circ \mathrm{G}^{\mathrm{obj}},\mathrm{F}^{\mathrm{hom}}\circ \mathrm{G}^{\mathrm{hom}})\).</p>
+</blockquote>Before I provide some examples of functors, I should introduce a few new concepts. If \(\mathcal{C}\) is a category, then its <em>opposite category</em> is the category \(\mathcal{C}^{\textrm{op}}\) where \(\mathrm{obj}(\mathcal{C}^{\textrm{op}})=\mathrm{obj}(\mathcal{C})\) and \(\mathrm{Hom}_{\mathcal{C}^{\textrm{op}}}(A,B)=\mathrm{Hom}_{\mathcal{C}}(B,A)\). If \(\mathcal{A},\mathcal{B}\) are categories, a <em>contravariant</em> functor from \(\mathcal{A}\) to \(\mathcal{B}\) is a functor from \(\mathcal{A}^{\mathrm{op}}\) to \(\mathcal{B}\). A <em>presheaf</em> on a category \(\mathcal{C}\) is a contravariant functor from \(\mathcal{C}\) to \(\mathbf{Set}\). <!--- The product \\(\mathcal{A}\times\mathcal{B}\\) of the two categories is the category where \\(\mathrm{obj}(\mathcal{A}\times \mathcal{B})=\mathrm{obj}(\mathcal{A})\times \mathrm{obj}(\mathcal{B})\\) and the morphisms \\(\mathrm{Hom}_{\mathcal{A}\times \mathcal{B}}((A_1,B_1),(A_2,B_2))=\mathrm{Hom}_{\mathcal{A}}(A_1,A_2)\times \mathrm{Hom}_{\mathcal{B}}(B_1,B_2)\\).--> Finally, here are the examples,</p>
+<ol>
+<li>the identity functor \(1_{\mathcal{C}}\) from \(\mathcal{C}\) to \(\mathcal{C}\) with \(1_{\mathcal{C}}^{\textrm{obj}}:X\mapsto X\) and \(1_{\mathcal{C}}^{\textrm{hom}}:f\mapsto f\)</li>
+<li>the constant functor \(\Delta_{X}\) from \(\mathcal{A}\) to \(\mathcal{B}\) with \(\Delta_{X}^{\mathrm{obj}}:A\mapsto X\) and \(\Delta_{X}^{\mathrm{hom}}:f\mapsto 1_X\) where \(X\in\mathrm{obj}(\mathcal{B})\)</li>
+<li>the functor \(\mathrm{F}\) from \(\mathbf{Grp}\) to \(\mathbf{Set}\) with \(\mathrm{F}^{\textrm{obj}}:(G,\cdot)\mapsto G\) and \(\mathrm{F}^{\textrm{hom}}:f\mapsto f\). Functors as such are called <em>forgetful</em> functors, since it forgets its operation. We can also construct forgetful functors from \(\mathbf{Ring}\) to \(\mathbf{Grp}\), and ones from \(\mathbf{Top}\) to \(\mathbf{Set}\), and so on. There is no precise definition for a forgetful functor</li>
+<li>the functor \(\mathrm{Hom}_{\mathcal{C}}(A,-)\) from a locally small category \(\mathcal{C}\), where \(A\in\mathrm{obj}(\mathcal{C})\), to the category \(\mathbf{Set}\), such that the mappings \(\mathrm{Hom}_{\mathcal{C}}(A,-)^{\mathrm{obj}}:X\mapsto \mathrm{Hom}_{\mathcal{C}}(A,X)\) and \(\mathrm{Hom}_{\mathcal{C}}(A,-)^{\mathrm{hom}}:f\mapsto (f\circ -)\) where \(f\circ -\) is the mapping \(g\mapsto f\circ g\) as a morphism. Similarly, we define a presheaf \(\mathrm{Hom}_{\mathcal{C}}(-,B)\) of \(\mathcal{C}\) where \(B\in\mathrm{obj}(\mathcal{C})\), such that the mappings \(\mathrm{Hom}_{\mathcal{C}}(-,B)^{\mathrm{obj}}:X\mapsto \mathrm{Hom}_{\mathcal{C}}(X,B)\) and \(\mathrm{Hom}_{\mathcal{C}}(-,B)^{\mathrm{hom}}:f\mapsto (-\circ f)\) where \(-\circ f\) is the mapping \(g\mapsto g\circ f\) as a morphism. These two functor are called the covariant and contravariant <em>hom-functors</em>. Moreover, any functor that is isomorphic to a hom-functor in \(\mathbf{Cat}\) is a <em>representable functor</em>.</li>
+</ol>
+<p>Informally, we use the term “diagram” to refer to a multi-directed-graph, or a quiver, with vertices are objects and edges as morphisms to represent part of a category and a composition for edges. We use different notations for different kinds of morphisms: a hooked arrow \(\hookrightarrow\) to represent a monomorphism, and a double arrow \(\twoheadrightarrow\) for epimorphisms.</p>
+<blockquote><p>Let \(\mathrm{F}\) be a functor from \(\mathcal{A}\) to \(\mathcal{B}\). Let \(\)</p>
+</blockquote>
+<blockquote><p>Definition 5. (Natural Transformation) Let \(\mathrm{F},\mathrm{G}\) be functors from \(\mathcal{A}\) to \(\mathcal{B}\). A <em>natural transformation</em> \(\alpha\) from \(\mathrm{F}\) to \(\mathrm{G}\) is mapping \(\alpha:\mathrm{obj}(\mathcal{A})\rightarrow \mathrm{Mor}(\mathcal{B})\) with \(\alpha:X\mapsto \alpha_X\) such that \(\alpha_{X}\in\mathrm{Hom}_{\mathcal{B}}(\mathrm{F}^{\mathrm{obj}}(X),\mathrm{G}^{\mathrm{obj}}(X))\) and the following diagram commutes for all \(A,B\in\mathrm{obj}(\mathcal{A})\) and for all \(f\in\mathrm{Hom}_{\mathcal{A}}(A,B)\)<br>We use \(\alpha:\mathrm{F}\Rightarrow \mathrm{G}\) to denote \(\alpha\) is a natural transformation from \(\mathrm{F}\) to \(\mathrm{G}\), and we say that \(\alpha_X\) is a <em>component</em> of \(\alpha\) at \(X\). A natural transformation is a <em>natural isomorphism</em> if all its components are isomorphisms.</p>
+</blockquote><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Abstract-Algebra/">#Abstract Algebra</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Category-Theory/">#Category Theory</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/archives/e3b6140a/">Nine Point Circle and Feuerbach&#39;s Theorem</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="addthis_inline_share_toolbox"></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-603b815e662e1491"></script>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '9b6b644601c8c4ac091e',
+        clientSecret: '3e5985036ab82a3cb565a6694475650384c86295',
+        id: 'archives/1e1b1b37/',
+        repo: 'MathNotFound-comments',
+        owner: 'YunhaiXiang',
+        admin: ['YunhaiXiang'],
+        language: 'en',
+        distractionFreeMode: false,
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2021 Yunhai Xiang&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+</script>
+
+    
+    
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
+
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+        }
+
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+      })
+    </script>
+
+    
+    
+
+    
+
+
+<script src="/js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="custom_mathjax_source">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+    
+</body>
+</html>
