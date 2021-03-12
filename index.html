@@ -338,48 +338,6 @@
 
 
     
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/archives/ad21318b/" itemprop="url">Quadratic Reciprocity Times Three</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            <time datetime="2019-02-21T06:09:24.000Z" itemprop="datePublished">Feb 21 2019</time>
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/Mathematics/">Mathematics</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            3 minutes read (About 412 words)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <p>Besides the Pythagorean theorem and the fundamental theorem of algebra, the law of <em>Quadratic Reciprocity</em> is probably the most oftenly proved theorem in math. In fact, on <a href="http://www.rzuser.uni-heidelberg.de/~hb3/fchrono.html" target="_blank" rel="noopener">this</a> website you can find 246 different proofs (collected by the mathematician Franz Lemmermeyer) of the theorem. In this article, I will discuss a few of them that I thought are the best ones. First, we define what a <em>quadratic residue</em> is. </p>
-<p><em>Definition.</em> For an odd prime $p$ and an integer $a\in\mathbf{Z}$ coprime to $p$, if there exists $n\in\mathbf{Z}$ such that $ a\equiv n^2\pmod{p}$ then we say that $a$ is a quadratic residue modulo $p$ (a quadratic non-residue otherwise).</p>
-<p>It is easy to see that in $\mathbf{Z}/p\mathbf{Z}$ there are exactly $\frac{p-1}{2}$ quadratic residues, namely, $1^2,2^2,\dots,\left(\frac{p-1}{2}\right)^2$. To see this, note that if $i^2\equiv j^2\pmod{p}$ for $1\le i,j\le \frac{p-1}{2}$, then $p\mid (i+j)(i-j)$ but $2\le i+j\le p-1$ so $i\equiv j\pmod{p}$. Next we introduce the Legendre symbol, with which we can write the law of quadratic reciprocity concisely.</p>
-<p><em>Definition</em>. For an odd prime $p$ and $a\in \mathbf{Z}$<br>$$<br>\left(\dfrac{a}{p}\right):=<br>\left\{\begin{matrix}<br>1&amp;a\mathrm{\; is\; a\; quadratic\; residue\; modulo\;}p\\<br>-1&amp;a\mathrm{\; is\; a\; quadratic\; nonresidue\; modulo\;}p\\<br>0&amp;a\equiv 0\pmod{p}\\<br>\end{matrix}\right.<br>$$<br><em>Theorem (Quadratic Reciprocity)</em>. If $p,q$ are two distinct odd primes, then<br>$$<br>\left(\dfrac{p}{q}\right)\left(\dfrac{q}{p}\right)=(-1)^{\frac{p-1}{2}\cdot \frac{q-1}{2}}<br>$$<br>To prove this, we first introduce a useful lemma by Euler. By Fermat’s little theorem, in $(\mathbf{Z}/p\mathbf{Z})[x]$, the polynomial $x^{p-1}-1=(x^{\frac{p-1}{2}}+1)(x^{\frac{p-1}{2}}-1)$ takes on roots over all nonzero residues. And, since if $a\equiv n^2\pmod{p}$ is a quadratic residue, then $a^{\frac{p-1}{2}}\equiv n^{p-1}\equiv 1\pmod{p}$, the quadratic residues are precisely roots of ​$x^{\frac{p-1}{2}}-1$, in other words,</p>
-<p><em>Lemma (Euler’s Criterion)</em>. For an odd prime $p$ and $a\in \mathbf{Z}$<br>$$<br>\left(\frac{a}{p}\right)=a^{\frac{p-1}{2}}\pmod{p}<br>$$<br>This immediately gives the corollary that the Legendre symbol is a completely multiplicative function, that is  $\left(\frac{ab}{p}\right)=\left(\frac{a}{p}\right)\left(\frac{b}{p}\right)$ for $a,b\in\mathbf{Z}$ and odd prime $p$.</p>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
-    
-    </div>
-    
-    
-</article>
-
-
-
-
-    
     
     </div>
 </section>
